@@ -1,0 +1,127 @@
+/* ============================================================
+   Serendipity — production overrides + responsive refinements
+   Loaded LAST. The generated css (tokens/base/sections/pages) is
+   kept faithful to the signed-off design; post-handoff tweaks and
+   the mobile pass live here so they're easy to find and so the
+   theme-mapping story for HubSpot stays clean.
+   ============================================================ */
+
+/* ---- Hero: stronger scrim + text-shadow so the white headline
+        clears WCAG AA over any photo (our hero has a bright window). ---- */
+.hero-scrim {
+  background: linear-gradient(90deg,
+    rgba(11,34,51,0.95) 0%,
+    rgba(11,34,51,0.84) 48%,
+    rgba(11,34,51,0.46) 100%);
+}
+.hero-copy h1,
+.hero-copy .lede { text-shadow: 0 1px 22px rgba(11,34,51,0.55); }
+
+/* ==========================================================
+   RESPONSIVE / MOBILE PASS
+   Desktop design was the source of truth; these refine the
+   handoff's existing breakpoints (1000 / 760 / 600 / 440).
+   ========================================================== */
+
+/* ---- Tablet & down: hero copy goes full width ---- */
+@media (max-width: 860px) {
+  .hero { min-height: clamp(480px, 82vh, 640px); }
+  .hero-copy { max-width: 100%; }
+  .hero-scrim {
+    background: linear-gradient(180deg,
+      rgba(11,34,51,0.72) 0%,
+      rgba(11,34,51,0.80) 60%,
+      rgba(11,34,51,0.92) 100%);
+  }
+  .hero-bg img { object-position: 68% center; }
+}
+
+/* ---- Mobile nav collapse. Lives here (not sections.css) so it applies on
+        EVERY page, including assessment.html which doesn't load sections.css. ---- */
+@media (max-width: 760px) {
+  .site-header .wrap { height: 64px; }
+  .main-nav {
+    display: none; position: absolute; top: 64px; left: 0; right: 0;
+    background: var(--c-paper); border-bottom: 1px solid var(--c-line);
+    flex-direction: column; align-items: stretch;
+    padding: var(--s-2) clamp(20px, 4vw, 40px); box-shadow: var(--shadow-card);
+  }
+  .main-nav.open { display: flex; }
+  .main-nav a { font-size: 16px; padding: 13px 0; border-bottom: 1px solid var(--c-line); }
+  .nav-toggle { display: inline-flex; }
+  html { scroll-padding-top: 76px; }
+}
+
+/* ---- 30/90 method: turn the broken 2x2 into a clean vertical timeline ---- */
+@media (max-width: 760px) {
+  .rail-scale { display: none; }
+  .method-rail { display: block; position: relative; padding-left: 26px; }
+  .method-rail::before {
+    display: block; content: ""; position: absolute;
+    left: 8px; top: 6px; bottom: 6px; right: auto; width: 2px; height: auto;
+    background: linear-gradient(180deg, var(--c-accent), var(--c-teal));
+  }
+  .method-rail .phase { padding-top: 0; padding-bottom: 22px; padding-left: 0; }
+  .method-rail .phase:last-child { padding-bottom: 0; }
+  .method-rail .phase-node { left: -26px; top: 4px; transform: none; }
+}
+
+/* ---- Service cards: stop the awkward sub-300px squeeze; let them
+        stack full-width instead of a cramped horizontal scroll ---- */
+@media (max-width: 620px) {
+  .svc-row { flex-direction: column; overflow: visible; }
+  .svc-row > .svc-card { min-width: 0; }
+  .svc-shot img { aspect-ratio: 16 / 9; }
+  .svc-grow { grid-template-columns: 1fr; }
+}
+
+/* ---- Before/after, results, assessment device: tighten stacked spacing ---- */
+@media (max-width: 760px) {
+  .ba-list li { min-height: 0; }
+  .case-card .case-metrics { gap: 18px; }
+  .scorecard-grid { gap: var(--s-3); }
+  .pullquote .pq { font-size: clamp(24px, 7vw, 34px); }
+}
+
+/* ---- Footer: comfortable single column on small phones ---- */
+@media (max-width: 480px) {
+  .footer-legal { flex-direction: column; gap: 8px; }
+}
+
+/* ---- Cert badges: keep them from getting tiny on phones ---- */
+@media (max-width: 560px) {
+  .cert-badges { gap: 22px 28px; }
+  .cert-badge { width: 96px; }
+  .cert-badge img { width: 78px; height: 78px; }
+}
+
+/* ==========================================================
+   ACCESSIBILITY (WCAG 2.2 AA) — post-review refinements
+   ========================================================== */
+
+/* Visible keyboard focus on all interactive controls. (Text inputs already
+   show a focus ring via box-shadow; links and buttons had none.) */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--c-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.scheme-navy a:focus-visible,
+.scheme-navy button:focus-visible,
+.scheme-navy summary:focus-visible,
+.site-footer a:focus-visible,
+.device :focus-visible {
+  outline-color: var(--c-marker);
+}
+
+/* Gold highlight words inside headings: deepen on LIGHT surfaces so they clear
+   the 3:1 large-text contrast minimum. Navy keeps the bright gold (passes 8.6:1). */
+.hl-gold { color: #A8741B; }
+
+/* Small gold UI text + tertiary notes: lift to a legible value (>=4.5:1). */
+.pill-gold { color: #7A5410; }
+.contact-form .form-note,
+.g-note { color: var(--c-ink-2); }

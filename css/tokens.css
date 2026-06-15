@@ -1,0 +1,89 @@
+/* ============================================================
+   Serendipity — Design Tokens v2  ("Editorial + Evidence")
+   Brand locked: navy #0B2233, gold #E9B44C, cream #F8F6F1,
+   cool gray #F4F7F9, white, brand blue #175477.
+   Type: Newsreader (display/numerals) · Archivo (headings/UI)
+         · Source Sans 3 (body). Maps to HubSpot theme settings.
+   ============================================================ */
+
+
+:root {
+  /* ---- Color roles (HubSpot theme > Colors) ---- */
+  --c-navy:        #0B2233;   /* anchor / dark surface */
+  --c-paper:       #F8F6F1;   /* default warm surface */
+  --c-cool:        #F4F7F9;   /* secondary cool surface */
+  --c-surface:     #FFFFFF;   /* cards */
+  --c-accent:      #175477;   /* brand blue — links, diagram lines, data points */
+  --c-marker:      #E9B44C;   /* gold — single accent: marker, key data, assessment */
+  --c-marker-deep: #C8902F;
+  --c-teal:        #0E7C86;   /* secondary accent — growth & adoption only */
+  --c-teal-light:  #3AA6AE;   /* teal highlight on dark */
+  --c-ink:         #222B35;   /* body text */
+  --c-ink-2:       #51606E;   /* secondary text */
+  --c-ink-3:       #8A95A0;   /* tertiary / captions */
+  --c-line:        #E7E3DA;   /* hairlines on warm */
+  --c-line-cool:   #E2E8EE;   /* hairlines on cool/white */
+
+  /* on-navy */
+  --c-on-dark:     #F4F7F9;
+  --c-on-dark-2:   rgba(244, 247, 249, 0.68);
+  --c-on-dark-3:   rgba(244, 247, 249, 0.42);
+  --c-navy-soft:   rgba(244, 247, 249, 0.07);
+  --c-navy-line:   rgba(244, 247, 249, 0.16);
+
+  /* tints derived from brand blue */
+  --c-accent-soft: color-mix(in oklab, var(--c-accent) 7%, #FFFFFF);
+  --c-accent-line: color-mix(in oklab, var(--c-accent) 20%, #FFFFFF);
+  --c-gold-soft:   color-mix(in oklab, var(--c-marker) 16%, #FFFFFF);
+  --c-gold-line:   color-mix(in oklab, var(--c-marker) 42%, #FFFFFF);
+
+  /* ---- Data-viz language ---- */
+  --viz-line:  var(--c-accent);    /* thin navy/brand-blue lines */
+  --viz-key:   var(--c-marker);    /* gold key data points */
+  --viz-track-light: #E4E9EE;
+  --viz-track-dark:  rgba(244, 247, 249, 0.14);
+
+  /* ---- Type ---- */
+  --ff-display: 'Newsreader', Georgia, 'Times New Roman', serif;  /* hero, pull-quotes, numerals */
+  --ff-heading: 'Archivo', system-ui, -apple-system, sans-serif;  /* H2/H3, eyebrows, UI, buttons */
+  --ff-body:    'Source Sans 3', system-ui, -apple-system, sans-serif;
+
+  --fs-hero:    clamp(44px, 5.4vw, 76px);
+  --fs-h2:      clamp(30px, 3.2vw, 46px);
+  --fs-h3:      clamp(21px, 1.9vw, 27px);
+  --fs-h4:      19px;
+  --fs-body-lg: 19px;
+  --fs-body:    17px;
+  --fs-sm:      15px;
+  --fs-xs:      13px;
+  --fs-eyebrow: 13px;
+
+  --lh-display: 1.05;
+  --lh-h2:      1.1;
+  --lh-body:    1.62;
+  --track-eyebrow: 0.16em;
+
+  /* ---- Spacing (8px base) ---- */
+  --s-1: 8px;  --s-2: 16px; --s-3: 24px; --s-4: 32px;
+  --s-5: 40px; --s-6: 48px; --s-8: 64px; --s-12: 96px;
+  --section-y: clamp(64px, 8.5vw, 108px);
+  --content-w: 1240px;
+
+  /* ---- Shape & elevation ---- */
+  --r-card: 18px;
+  --r-media: 20px;
+  --r-btn: 999px;
+  --r-input: 12px;
+  --r-pill: 999px;
+  --r-sm: 10px;
+  --shadow-card: 0 2px 14px rgba(11, 34, 51, 0.07);
+  --shadow-card-hover: 0 14px 34px rgba(11, 34, 51, 0.14);
+  --shadow-float: 0 24px 60px rgba(11, 34, 51, 0.22);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur: 180ms;
+}
+
+/* density tweak */
+html[data-density="compact"] { --section-y: clamp(48px, 6vw, 80px); }

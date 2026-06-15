@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-density="comfortable">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Archivo:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta name="theme-color" content="#0B2233">
+<link rel="canonical" href="https://createserendipity.com/assessment.html">
+<title>Serendipity · HubSpot Readiness Score</title>
+<meta name="description" content="How ready is your business for HubSpot? A 4-minute, 24-question self-diagnostic across the seven areas where implementations succeed or fail. Instant score, no portal access needed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://createserendipity.com/assessment.html">
+<meta property="og:image" content="https://createserendipity.com/assets/imagery/hero.png">
+<meta property="og:title" content="Serendipity · HubSpot Readiness Score">
+<meta property="og:description" content="How ready is your business for HubSpot? A 4-minute, 24-question self-diagnostic across the seven areas where implementations succeed or fail. Instant score, no portal access needed.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/assessment.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" data-screen-label="Header">
+  <div class="wrap">
+    <a class="logo-link" href="index.html" aria-label="Serendipity home"><img class="logo-img" src="assets/logo/serendipity-logo.png" alt="Serendipity"></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html#help">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="assessment.html" aria-current="page">Take the assessment</a>
+      <a href="about.html">About</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="contact.html">Book a call</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main class="assess-shell">
+  <div class="assess-wrap">
+
+    <!-- ============ INTRO ============ -->
+    <section id="intro">
+      <span class="a-badge">Free · about 4 minutes · No HubSpot access needed</span>
+      <h1>How ready is your business for <span class="hl-gold">HubSpot</span>?</h1>
+      <p class="a-lede">Half of CRM implementations fail, and it's almost never the software. It's the seven readiness areas underneath it. Answer 24 quick, plain-English questions about how your team actually works, and find out exactly where you stand before you spend a dollar.</p>
+
+      <h2 class="a-h2">What you'll get instantly</h2>
+      <div class="a-cards">
+        <div class="a-card"><div class="a-num">01</div><b>Your Readiness Score</b><span>A 0–100 score and named stage, benchmarked against companies your size and industry.</span></div>
+        <div class="a-card"><div class="a-num">02</div><b>Your 7-area breakdown</b><span>Where you're strong and where implementations actually fail: data, sales, reporting, adoption, and more.</span></div>
+        <div class="a-card"><div class="a-num">03</div><b>Where to start, and why</b><span>A specific recommendation for the right first move for your business, with the reasoning behind it.</span></div>
+      </div>
+
+      <h2 class="a-h2">Why take it</h2>
+      <div class="why-list">
+        <div class="why-item"><div class="dot"></div><div><b>The failures are predictable.</b> CRM projects don't fail at random, they fail in the same seven areas, in the same ways. Four minutes now shows you which ones would bite you.</div></div>
+        <div class="why-item"><div class="dot"></div><div><b>The answers are useful even if we never talk.</b> You'll see your score the moment you finish, and the full scorecard (risks, radar, fix-first plan) is yours to act on with or without us.</div></div>
+        <div class="why-item"><div class="dot"></div><div><b>If you do book a call, it starts at the plan, not a pitch.</b> Your scorecard means the conversation begins where most discovery calls end: with your situation already mapped.</div></div>
+      </div>
+
+      <div class="howstrip">
+        <span>24 plain-English questions</span><span>About 4 minutes</span><span>No jargon, no portal access</span><span>Results on the spot</span>
+      </div>
+      <p class="a-built">Built for founders, sales leaders, and ops leaders at growing B2B companies, whether you have no CRM, you're on Salesforce, or you own HubSpot and know you're not getting full value.</p>
+
+      <button class="btn btn-gold" onclick="SQ.startQuiz()">Get my Readiness Score <span class="arrow">→</span></button>
+
+      <button class="sample-callout" onclick="SQ.demoScorecard()">
+        <span class="thumb">
+          <svg width="80" height="80" viewBox="0 0 92 92" aria-hidden="true">
+            <polygon points="46,18 68,34 62,62 30,64 22,40" fill="none" stroke="#E2E8EE"/>
+            <polygon points="46,29 60,38 56,55 36,57 31,43" fill="none" stroke="#E2E8EE"/>
+            <polygon points="46,22.6 63.9,36.9 57.7,58.9 33.4,60.4 25.8,41.6" fill="rgba(233,180,76,.2)" stroke="#C8902F" stroke-width="2"/>
+            <circle cx="46" cy="22.6" r="2.6" fill="#C8902F"/><circle cx="63.9" cy="36.9" r="2.6" fill="#C8902F"/><circle cx="57.7" cy="58.9" r="2.6" fill="#C8902F"/><circle cx="33.4" cy="60.4" r="2.6" fill="#C8902F"/><circle cx="25.8" cy="41.6" r="2.6" fill="#C8902F"/>
+          </svg>
+          <span class="chip">57</span>
+        </span>
+        <span class="sc-body"><b>Curious what you'll get? Preview a sample scorecard</b><span>See the full results page, score, 7-area radar, critical risks, and the where-to-start plan, for a sample manufacturing company on Salesforce. No questions, no email.</span></span>
+        <span class="go">Preview →</span>
+      </button>
+    </section>
+
+    <!-- ============ QUIZ ============ -->
+    <section id="quiz" class="hidden">
+      <div class="a-progress"><div class="a-bar"><i id="barfill"></i></div><small id="prognote"></small></div>
+      <div id="qbox"></div>
+    </section>
+
+    <!-- ============ TEASER + GATE ============ -->
+    <section id="gate" class="hidden">
+      <div class="score-hero" style="padding:28px 20px;margin-bottom:18px">
+        <div class="score-eyebrow">Your score, calculated</div>
+        <div class="score-num" id="t-num">–</div>
+        <div class="stage" id="t-stage">–</div>
+      </div>
+      <div class="a-panel" style="padding:22px 24px;margin-bottom:18px">
+        <h2 style="font-size:19px;margin-bottom:12px">Your full scorecard is ready</h2>
+        <div class="lock-row"><div class="lk">🔒</div><div id="t-risks"><b>Critical risks identified</b></div></div>
+        <div class="lock-row"><div class="lk">🔒</div><div><b>Where to start:</b> <span id="t-reco-lead"></span><span id="t-reco-blur" class="blur"></span>, the right first move for your business, and why</div></div>
+        <div class="lock-row"><div class="lk">🔒</div><div><b>Your 7-area radar + fix-first plan</b>, where you're strong, where you're exposed, and what to do about it</div></div>
+      </div>
+      <div class="field"><label for="g-name">Name</label><input type="text" id="g-name" placeholder="Jane Smith"></div>
+      <div class="field"><label for="g-email">Work email</label><input type="email" id="g-email" placeholder="jane@company.com"></div>
+      <p class="g-error" id="g-error"></p>
+      <button class="btn btn-gold" onclick="SQ.unlock()">Unlock my full scorecard <span class="arrow">→</span></button>
+      <p class="g-note">This is a preview build, nothing is sent or stored. Enter any work email (e.g. <b>test@test.com</b>) to see your real, scored results. In production this becomes a HubSpot form that emails you the full PDF report and writes your scores to your contact record.</p>
+    </section>
+
+    <!-- ============ RESULTS ============ -->
+    <section id="results" class="hidden">
+      <div class="score-hero">
+        <div class="score-num" id="r-num">–</div>
+        <div class="stage" id="r-stage">–</div>
+        <p class="stage-desc" id="r-stagedesc"></p>
+      </div>
+      <div class="a-panel reco-panel" id="r-reco">
+        <div class="reco-eyebrow">Where to start</div>
+        <h2 id="reco-title"></h2>
+        <p id="reco-why"></p>
+        <div class="reco-cover"><b>What your Readiness Review will cover:</b> <span id="reco-first"></span>, so the call picks up exactly where this scorecard leaves off.</div>
+      </div>
+      <p class="bench" id="r-bench"></p>
+      <div class="a-panel radar-panel"><div id="radar"></div></div>
+      <div class="a-panel"><h2>Your 7 readiness areas</h2><div id="r-cats" style="margin-top:10px"></div></div>
+      <div id="r-risks-wrap" class="hidden"><h2>⚠ Critical risks we spotted</h2><div id="r-risks"></div></div>
+      <div class="a-panel"><h2>Fix these first</h2><div id="r-actions" style="margin-top:8px"></div></div>
+      <div class="cta-final" id="cta-final">
+        <h2>Walk your scorecard with us</h2>
+        <p>Book a free 30-minute Readiness Review. We'll go through your results area by area and map what to fix before, or after, you go live.</p>
+        <a class="btn btn-gold" href="contact.html">Book my Readiness Review <span class="arrow">→</span></a>
+      </div>
+      <p class="proto-note">3 qualifiers + 21 scored questions · route-don't-gate recommendation engine · leadership &amp; adoption weighted 1.25× · red-flag overrides active</p>
+    </section>
+
+  </div>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo-link" href="index.html"><img class="logo-img" src="assets/logo/serendipity-logo-white.png" alt="Serendipity"></a>
+        <p>We make the move to HubSpot, done right. Wherever you're starting, we make it smooth, make it stick, and grow your business on it.</p>
+        <img class="footer-badge" src="assets/badges/hubspot-platinum-badge.png" alt="HubSpot Platinum Solutions Partner">
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#implementation">HubSpot Implementation</a></li>
+          <li><a href="index.html#migration">CRM Migration</a></li>
+          <li><a href="index.html#rescue">Portal Rescue</a></li>
+          <li><a href="index.html#revops">Ongoing RevOps</a></li>
+          <li><a href="index.html#inbound">Inbound &amp; Demand Gen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get started</h4>
+        <ul>
+          <li><a href="contact.html">Book a call</a></li>
+          <li><a href="assessment.html">Readiness assessment</a></li>
+          <li><a href="mailto:hello@createserendipity.com">hello@createserendipity.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>© 2026 Serendipity. All rights reserved.</span>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/assessment.js"></script>
+</body>
+</html>
