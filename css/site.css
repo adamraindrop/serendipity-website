@@ -16,6 +16,8 @@
 }
 .hero-copy h1,
 .hero-copy .lede { text-shadow: 0 1px 22px rgba(11,34,51,0.55); }
+/* the gold "done right." marker has its own solid background — no shadow on its text */
+.hero .mark-it { text-shadow: none; }
 
 /* ==========================================================
    RESPONSIVE / MOBILE PASS
@@ -169,8 +171,14 @@ summary:focus-visible,
 .manifesto-copy { display: flex; flex-direction: column; gap: var(--s-3); align-items: flex-start; max-width: 36em; }
 .manifesto-copy p { color: var(--c-on-dark-2); font-size: var(--fs-body); line-height: 1.62; }
 .manifesto-copy p:first-of-type { color: var(--c-on-dark); font-size: var(--fs-body-lg); }
-.manifesto-viz { display: flex; flex-direction: column; gap: var(--s-3); }
+.manifesto-viz { display: flex; flex-direction: column; gap: var(--s-4); }
+.manifesto-photo { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--r-media); display: block; box-shadow: var(--shadow-float); border: 1px solid var(--c-navy-line); }
 .engine-graphic { width: 100%; height: auto; display: block; }
+
+/* "How we help" warm team band */
+.help-banner { margin: 0 auto var(--s-6); border-radius: var(--r-media); overflow: hidden; box-shadow: var(--shadow-card-hover); border: 1px solid var(--c-line-cool); aspect-ratio: 2.8 / 1; max-height: 360px; }
+.help-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center 38%; display: block; }
+@media (max-width: 760px) { .help-banner { aspect-ratio: 16 / 10; max-height: none; } }
 .video-slot { display: flex; align-items: center; gap: 14px; width: 100%; text-align: left; background: var(--c-navy-soft); border: 1px solid var(--c-navy-line); border-radius: 14px; padding: 13px 16px; color: var(--c-on-dark); cursor: not-allowed; }
 .video-slot-play { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--c-marker); color: var(--c-navy); display: grid; place-items: center; }
 .video-slot-label { display: flex; flex-direction: column; line-height: 1.3; }
