@@ -21,28 +21,40 @@ python3 -m http.server 8190
 ## Structure
 
 ```
-index.html            Home (hero, trust, problem gauge, services, certs, 30/90 method,
-                      stakes, pull-quote, Perricone results, assessment preview, FAQ, CTA)
-case-studies.html     Perricone featured + "publishing soon" + what we measure + CTA
-about.html            Meet Luke + founder story + SCALE values + verify + stats + CTA
+index.html            Home — hero, trust, proof strip, problem gauge, services (+ custom
+                      vizzes), manifesto, certs, "where HubSpot is going", 30/90 method
+                      (+ 40/40/20), stakes, pull-quote, 2 case results, assessment, FAQ, CTA
+case-studies.html     Two real studies: Perricone + Affordable Blinds (Problem/Build/Outcome)
+about.html            Meet Luke (cropped portrait) + founder story + video slot + SCALE +
+                      purpose line + verify + CTA
 contact.html          Hero + lead form (styled, inert for now)
-assessment.html       The HubSpot Readiness Score quiz (full flow, real scoring)
+careers.html          [SCAFFOLD] "Be a blessing" — values/culture, open-roles stub (legal note)
+assessment.html       The Readiness Score quiz (full flow, real scoring)
 
 css/
-  tokens.css          Design tokens (:root custom properties) → maps to a HubSpot theme
+  tokens.css          Design tokens (:root) + friendly --navy/--gold aliases → HubSpot theme
   base.css            Reset, type, buttons, eyebrow, .hl-gold/.hl-teal, reveal, header
   sections.css        Homepage sections + textures + all built data-viz
-  pages.css           Inner-page components (case studies / about / contact)
+  pages.css           Inner-page components (case studies / about / contact / careers)
   assessment.css      The quiz, re-skinned in the brand language
-  site.css            Production overrides + the mobile pass (loaded last)
+  site.css            Production overrides, the V2 sections + signature CSS, the mobile pass
 
 js/
-  main.js             Scroll-reveal, count-up, mobile nav, poster video
+  main.js             Scroll-reveal, count-up, mobile nav (+ aria-expanded), poster video
   assessment.js       Quiz logic (questions, scoring, 6-path recommendation engine, radar)
 
 assets/
+  brand/              The signature system: serendipity-engine.svg + convergence-mark-{dark,light}.svg
   logo/ badges/ press/ clients/ certs/ screenshots/ case/ portrait/ imagery/ favicon.png
 ```
+
+## The signature system ("feels custom", V2)
+
+One ownable visual idea, the **"engineered convergence"** motif: many small touches resolving
+into one rising line and a single gold point (the 26 emails to one reply). Reused as the
+**Serendipity Engine** graphic in the homepage manifesto and as the **footer mark**, plus custom
+(non-stock) SVG iconography on the "where HubSpot is going" band and built mini-vizzes on the
+CRM Migration and Portal Rescue service cards (no lifestyle stock there).
 
 ## Design system
 
@@ -70,24 +82,29 @@ assets/
 
 ## Assets
 
-- **Real / load-bearing (kept, do not regenerate):** HubSpot pipeline + report screenshots, the 5
-  certification badges, Luke's portrait (shown full/uncropped on About), the Perricone/Natalie's
-  logo, press logos (Yahoo, Business Insider, MarketWatch, AP, Cision, RD), client logos. Press +
-  client logos were pulled from the live site's `hubfs/brand-assets/serendipity/`.
-- **Atmosphere only:** the AI-photoreal lifestyle photos (hero, FAQ, final-CTA backgrounds). Never
-  used as proof.
+- **Real / load-bearing (kept, do not regenerate):** the two HubSpot screenshots that are genuine UI
+  (`deal_pipeline`, `deal_report`), the 5 certification badges, Luke's portrait (cropped to Luke on
+  About), the Perricone/Natalie's logo, press logos (Yahoo, Business Insider, MarketWatch, AP,
+  Cision, RD), client logos. Press + client logos were pulled from the live site's
+  `hubfs/brand-assets/serendipity/`.
+- **Migration & Rescue cards** use **built in-page vizzes** (a source→HubSpot convergence diagram and
+  a tangle→order diagram), not photos — the R5 "screenshots" at those URLs were actually tinted
+  lifestyle stock, so we built clean UI instead of shipping a fake or a stock photo.
+- **Atmosphere only:** the AI-photoreal lifestyle photos (hero, FAQ, final-CTA, SCALE backgrounds).
 
-## Known placeholders / open items for Luke
+## Scaffolded / hold for Luke (V2 brief §L)
 
-- **Contact form** is styled but inert (no submission yet) — wire to a HubSpot form at launch.
-- **`href="#"` placeholders** (intentional, pending real URLs): "Verify Platinum status", the About
-  verify cards (HubSpot Directory / certs / LinkedIn), case-study "Read the full story", and the
-  footer Privacy / Terms.
-- **Service-card images for CRM Migration & Portal Rescue** currently resolve to tinted lifestyle
-  photos (that's what the referenced design assets are), not HubSpot UI like the other two cards.
-  Swap in real Migration/Rescue screenshots when available.
-- **[CONFIRM] copy:** Perricone quote + Natalie's exact title; the ~3-month migration and 10-day
-  audit timelines; guarantee remedy language (legal); the assessment question set/stage names.
+- **Contact form** is styled but inert — wire to a HubSpot form at launch.
+- **Founder video** slots (manifesto + About) are scaffolded "coming soon" buttons.
+- **Careers page** is a scaffold: faith-as-culture framing, no religious test. **[LEGAL] counsel must
+  review hiring language before launch** (note is in `careers.html` source). It's footer-linked, not
+  in the main nav, pending Luke's build-now-vs-roadmap call.
+- **`href="#"` placeholders** (pending real URLs): "Verify Platinum status", About verify cards
+  (HubSpot Directory / certs / LinkedIn), Perricone "Read the full story", footer Privacy / Terms.
+- **[SWAPPABLE]** the hero serendipity sub-line, the framework name ("The Serendipity Engine"), and
+  the exact "where HubSpot is going" treatment are scaffolded to the recommendation; easy to swap.
+- **[CONFIRM] copy:** final H1 wording; Perricone quote + Natalie's title; the ~3-month migration and
+  10-day audit timelines; guarantee remedy language (legal). No pricing anywhere (locked).
 
 ## Mobile
 
