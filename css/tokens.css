@@ -83,6 +83,23 @@
   /* ---- Motion ---- */
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
   --dur: 180ms;
+
+  /* ---- Friendly aliases (per build brief §2). Same values/roles as the
+     --c-* system above; these map 1:1 to HubSpot theme fields at port time. ---- */
+  --navy: var(--c-navy);
+  --gold: var(--c-marker);
+  --gold-deep: var(--c-marker-deep);
+  --cream: var(--c-paper);
+  --cool-gray: var(--c-cool);
+  --white: var(--c-surface);
+  --teal: var(--c-teal);
+  --teal-tint: var(--c-teal-light);
+  --brand-blue: var(--c-accent);
+  --ink: var(--c-ink);
+  --muted: var(--c-ink-2);
+  --font-display: var(--ff-display);
+  --font-ui: var(--ff-heading);
+  --font-body: var(--ff-body);
 }
 
 /* density tweak */

@@ -28,7 +28,7 @@
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" data-screen-label="Header">
   <div class="wrap">
-    <a class="logo-link" href="#top" aria-label="Serendipity home"><img class="logo-img" src="assets/logo/serendipity-logo.png" alt="Serendipity"></a>
+    <a class="logo-link" href="#top" aria-label="Serendipity home"><img class="logo-img" src="assets/logo/serendipity-logo.png" alt="Serendipity"><span class="logo-tag">Build the funnel. Drive revenue.</span></a>
     <nav class="main-nav" id="mainNav">
       <a href="#help">Services</a>
       <a href="case-studies.html">Case Studies</a>
@@ -56,10 +56,12 @@
       <div class="hero-copy col">
         <p class="eyebrow reveal">HubSpot Platinum Partner</p>
         <h1 class="reveal d1">The move to HubSpot, <span class="mark-it">done right.</span></h1>
+        <!-- [SWAPPABLE] serendipity sub-line (Luke still A/B-ing exact wording) -->
+        <p class="hero-subline reveal d1">We engineer the conditions for growth, so the right buyer meets the right message at the right moment.</p>
         <p class="lede reveal d1">Wherever you're starting from, we make the move smooth, make it stick, and turn HubSpot into the system your team actually runs the business on. Clear plan, live in 30 days.</p>
         <div class="hero-cta reveal d2">
-          <a class="btn btn-gold" href="contact.html">Book a call <span class="arrow">→</span></a>
-          <a class="btn btn-ghost" href="assessment.html">Take the 4-min assessment</a>
+          <a class="btn btn-gold" href="assessment.html">Take the 4-min assessment <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="contact.html">Book a call</a>
         </div>
         <div class="hero-proof reveal d2">
           <img class="hero-badge" src="assets/badges/hubspot-platinum-badge.png" alt="HubSpot Platinum Solutions Partner">
@@ -100,6 +102,23 @@
     </div>
   </section>
 
+  <!-- ===================== 2.5 · PROOF STRIP (cream, hard results before the scroll) ===================== -->
+  <section class="proof-strip scheme-cream" data-screen-label="Proof strip">
+    <div class="wrap">
+      <div class="proof-strip-inner reveal">
+        <a class="proof-item" href="case-studies.html#perricone">
+          <span class="num">100%</span>
+          <span class="proof-text"><b>Perricone</b><span>a 26-rep team to full CRM adoption</span></span>
+        </a>
+        <span class="proof-sep" aria-hidden="true"></span>
+        <a class="proof-item" href="case-studies.html#affordable-blinds">
+          <span class="num teal">60%</span>
+          <span class="proof-text"><b>Affordable Blinds</b><span>faster quote turnaround</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== 3 · PROBLEM (navy, gauge carries it — no photo) ===================== -->
   <section class="problem scheme-navy tx-topo" data-screen-label="Problem">
     <div class="wrap problem-stack">
@@ -129,8 +148,7 @@
     <div class="wrap">
       <div class="help-head">
         <div class="section-head center reveal">
-          <span class="phase-kicker phase-1">Phase One · The foundation</span>
-          <h2>Wherever you're starting, <span class="hl-gold">we're here to help</span>.</h2>
+          <h2>Wherever you're starting, <span class="hl-gold">there's a way in</span>.</h2>
           <p class="lede">Start fresh, switch platforms, or fix what's broken. However you get to HubSpot, the move runs the same way: fixed scope, a named owner, live in 30 days. Then we grow on it.</p>
         </div>
       </div>
@@ -140,50 +158,78 @@
           <div class="svc-top"><span class="svc-step">Set it up · New to HubSpot</span><span class="pill-time pill">30 days</span></div>
           <h3>HubSpot Implementation</h3>
           <p class="svc-desc">We architect HubSpot around your sales process, not a template, and train your team as we build, from a focused first build to a full revenue stack.</p>
-          <div class="svc-shot"><img id="shot-impl" src="assets/screenshots/deal_pipeline.png" alt="HubSpot pipeline screenshot" loading="lazy" decoding="async"></div>
-          <a class="svc-link" href="contact.html">Learn more <span class="arrow">→</span></a>
+          <div class="svc-shot"><img id="shot-impl" src="assets/screenshots/deal_pipeline.png" alt="HubSpot deal pipeline board" loading="lazy" decoding="async"></div>
+          <a class="svc-link" href="contact.html">I'm new to HubSpot <span class="arrow">→</span></a>
         </article>
 
         <article class="svc-card reveal d1" id="migration">
           <div class="svc-top"><span class="svc-step">Set it up · Switching platforms</span><span class="pill-time pill">~3 months</span></div>
           <h3>CRM Migration</h3>
           <p class="svc-desc">Move off Salesforce, Pipedrive, Dynamics, or a tangle of spreadsheets without losing your history, your reports, or your sanity. Rehearsed, then executed.</p>
-          <div class="svc-shot"><img id="shot-mig" src="assets/screenshots/records.png" alt="HubSpot records screenshot" loading="lazy" decoding="async"></div>
-          <a class="svc-link" href="contact.html">Learn more <span class="arrow">→</span></a>
+          <div class="svc-shot svc-viz">
+            <svg viewBox="0 0 320 240" role="img" aria-label="Migrating from Salesforce, Pipedrive, and spreadsheets into one HubSpot system">
+              <g font-family="Archivo, sans-serif" font-size="11.5" font-weight="600">
+                <rect x="12" y="44" width="104" height="30" rx="8" fill="#fff" stroke="#E2E8EE"/><text x="64" y="63" text-anchor="middle" fill="#51606E">Salesforce</text>
+                <rect x="12" y="105" width="104" height="30" rx="8" fill="#fff" stroke="#E2E8EE"/><text x="64" y="124" text-anchor="middle" fill="#51606E">Pipedrive</text>
+                <rect x="12" y="166" width="104" height="30" rx="8" fill="#fff" stroke="#E2E8EE"/><text x="64" y="185" text-anchor="middle" fill="#51606E">Spreadsheets</text>
+              </g>
+              <path d="M120 59 C 176 59, 190 120, 230 120" fill="none" stroke="#175477" stroke-width="2"/>
+              <path d="M120 120 C 176 120, 190 120, 230 120" fill="none" stroke="#175477" stroke-width="2"/>
+              <path d="M120 181 C 176 181, 190 120, 230 120" fill="none" stroke="#175477" stroke-width="2"/>
+              <circle cx="262" cy="120" r="36" fill="#0B2233"/>
+              <text x="262" y="114" text-anchor="middle" fill="#F8F6F1" font-family="Archivo, sans-serif" font-size="12.5" font-weight="700">HubSpot</text>
+              <path d="M250 128 l8 8 15 -17" fill="none" stroke="#E9B44C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <a class="svc-link" href="contact.html">I'm switching off Salesforce <span class="arrow">→</span></a>
         </article>
 
         <article class="svc-card reveal" id="rescue">
           <div class="svc-top"><span class="svc-step">Run it · Burned before</span><span class="pill-time pill">10-day audit</span></div>
           <h3>Portal Rescue</h3>
           <p class="svc-desc">You have HubSpot and it's a mess. We untangle what the last agency left and win your team back.</p>
-          <div class="svc-shot"><img id="shot-rescue" src="assets/screenshots/portal.png" alt="HubSpot portal screenshot" loading="lazy" decoding="async"></div>
-          <a class="svc-link" href="contact.html">Learn more <span class="arrow">→</span></a>
+          <div class="svc-shot svc-viz">
+            <svg viewBox="0 0 320 240" role="img" aria-label="Untangling a messy HubSpot portal into a clean, working system">
+              <path d="M34 70 C 92 34, 56 118, 110 96 S 44 160, 104 168 S 56 206, 124 196" fill="none" stroke="#B4472E" stroke-width="2.6" opacity="0.7"/>
+              <path d="M46 92 C 104 64, 70 138, 122 126 S 58 184, 112 186" fill="none" stroke="#B4472E" stroke-width="2.6" opacity="0.4"/>
+              <path d="M150 120 h26" stroke="#51606E" stroke-width="2"/><path d="M170 113 l8 7 -8 7" fill="none" stroke="#51606E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <g>
+                <rect x="194" y="72" width="112" height="26" rx="7" fill="#fff" stroke="#E2E8EE"/><circle cx="210" cy="85" r="6" fill="#0E7C86"/><path d="M207 85 l2.2 2.2 4.4 -4.6" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="225" y="81" width="62" height="8" rx="4" fill="#E2E8EE"/>
+                <rect x="194" y="108" width="112" height="26" rx="7" fill="#fff" stroke="#E2E8EE"/><circle cx="210" cy="121" r="6" fill="#0E7C86"/><path d="M207 121 l2.2 2.2 4.4 -4.6" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="225" y="117" width="48" height="8" rx="4" fill="#E2E8EE"/>
+                <rect x="194" y="144" width="112" height="26" rx="7" fill="#fff" stroke="#E2E8EE"/><circle cx="210" cy="157" r="6" fill="#0E7C86"/><path d="M207 157 l2.2 2.2 4.4 -4.6" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="225" y="153" width="68" height="8" rx="4" fill="#E2E8EE"/>
+              </g>
+            </svg>
+          </div>
+          <a class="svc-link" href="contact.html">I inherited a mess <span class="arrow">→</span></a>
         </article>
 
         <article class="svc-card reveal d1" id="revops">
           <div class="svc-top"><span class="svc-step">Run it · After launch</span><span class="pill-time pill">Ongoing</span></div>
           <h3>Ongoing RevOps</h3>
-          <p class="svc-desc">A fractional operations partner who keeps the system honest as your team and pipeline grow.</p>
-          <div class="svc-shot"><img id="shot-revops" src="assets/screenshots/deal_report.png" alt="HubSpot report screenshot" loading="lazy" decoding="async"></div>
-          <a class="svc-link" href="contact.html">Learn more <span class="arrow">→</span></a>
+          <p class="svc-desc">A fractional operations partner who keeps the system honest as you grow: integrations, data migrations, CRM architecture, custom API work, complex automations, and the reporting leadership runs on.</p>
+          <div class="svc-shot"><img id="shot-revops" src="assets/screenshots/deal_report.png" alt="HubSpot deal report dashboard" loading="lazy" decoding="async"></div>
+          <a class="svc-link" href="contact.html">We're live and growing <span class="arrow">→</span></a>
         </article>
       </div>
 
+      <p class="builders-line reveal d1">We're builders first. We take a portal from zero to fully configured, integrate anything with an API, and run six-figure implementations without outside consultants. Then we grow on it.</p>
+
       <div class="grow-phase">
         <div class="section-head center reveal">
-          <span class="phase-kicker phase-2">Phase Two · Grow Your Business</span>
-          <h2>Once it's working, <span class="hl-teal">we help you drive more leads and close more deals</span>.</h2>
+          <h2>Once it's working, <span class="hl-teal">we grow on it</span>.</h2>
+          <p class="lede">Inbound and demand gen come after the system is solid, never before. That's the whole point.</p>
         </div>
         <article class="svc-card svc-grow reveal d1" id="inbound">
           <div class="grow-copy">
             <h3>Inbound Marketing &amp; Demand Gen</h3>
-            <p class="svc-desc">Inbound and demand gen come after the system is solid, never before. Fill the funnel with the right accounts and turn your CRM into a revenue engine.</p>
+            <p class="svc-desc">Once the foundation is solid, we fill the funnel and drive revenue: demand gen, audience targeting, message and list building, creative, direct outreach, branding, web, video, and paid search and social.</p>
             <div class="grow-plays">
               <span class="abm">ABM &amp; account targeting</span>
               <span>Content &amp; lifecycle</span>
               <span>Paid + demand gen</span>
               <span>Lead routing</span>
             </div>
+            <a class="svc-link grow-link" href="contact.html">See the growth layer <span class="arrow">→</span></a>
           </div>
           <div class="grow-viz">
             <span class="gv-head">Lead scoring · how we tier your target accounts</span>
@@ -199,6 +245,25 @@
             </ul>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4.25 · MANIFESTO (navy, the serendipity story + Engine graphic) ===================== -->
+  <section class="manifesto scheme-navy tx-topo tx-left" data-screen-label="Manifesto">
+    <div class="wrap manifesto-grid">
+      <div class="manifesto-copy">
+        <h2 class="reveal d1">Serendipity isn't luck. <span class="hl-gold">It's engineered.</span></h2>
+        <p class="reveal d1">The name comes from a real moment. Luke was deep into a cold outreach campaign, and on the 26th email to one executive, she replied: "Where have you been all my life? This is exactly what we needed. This is serendipity." What felt like perfect timing to her was 26 engineered touches on our side.</p>
+        <p class="reveal d2">That's the whole idea. We reverse-engineer the conditions for growth, so the right buyer meets the right message at the right moment, and it feels like luck. It isn't. It's a system. That system is what createserendipity.com is named for.</p>
+      </div>
+      <div class="manifesto-viz reveal d2">
+        <img class="engine-graphic" src="assets/brand/serendipity-engine.svg" alt="The Serendipity Engine: twenty-six engineered touches converging into one reply">
+        <!-- [SCAFFOLD] founder-told video slot (Luke exploring a 45-60s video) -->
+        <button class="video-slot" type="button" aria-label="Founder video, coming soon" disabled>
+          <span class="video-slot-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="video-slot-label"><b>Luke tells the story</b><span>45-second founder video · coming soon</span></span>
+        </button>
       </div>
     </div>
   </section>
@@ -225,6 +290,32 @@
     </div>
   </section>
 
+  <!-- ===================== 4.75 · WHERE HUBSPOT IS GOING (white, light credibility band) [SCAFFOLD treatment] ===================== -->
+  <section class="horizon scheme-white tx-dots" data-screen-label="Where HubSpot is going">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <h2>Built for where <span class="hl-gold">HubSpot is going</span>.</h2>
+      </div>
+      <div class="horizon-grid reveal d1">
+        <div class="horizon-item">
+          <span class="horizon-ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 24 L12 17 L18 20 L26 10"/><circle cx="12" cy="17" r="1.8" fill="currentColor" stroke="none"/><circle cx="18" cy="20" r="1.8" fill="currentColor" stroke="none"/><circle cx="26" cy="10" r="2.8" fill="var(--gold)" stroke="none"/></svg></span>
+          <h4>Mid-market momentum</h4>
+          <p>The segment growing fastest, and the one we're built for.</p>
+        </div>
+        <div class="horizon-item">
+          <span class="horizon-ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="4" fill="var(--gold)" stroke="none"/><path d="M16 4.5 v3.5 M16 24 v3.5 M4.5 16 h3.5 M24 16 h3.5 M8.4 8.4 l2.5 2.5 M21.1 21.1 l2.5 2.5 M23.6 8.4 l-2.5 2.5 M10.9 21.1 l-2.5 2.5"/></svg></span>
+          <h4>Agentic acceleration</h4>
+          <p>AI-driven growth, the engineered edge behind how we work.</p>
+        </div>
+        <div class="horizon-item">
+          <span class="horizon-ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7 h22 l-7.5 9 v8 l-7 3.5 v-11.5 z"/><circle cx="16" cy="27.5" r="2.6" fill="var(--gold)" stroke="none"/></svg></span>
+          <h4>Marketing, reimagined</h4>
+          <p>The demand-gen half most HubSpot shops can't run. We do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== 5 · THE 30/90 METHOD = THE PLAN (cool gray, full-width diagram) ===================== -->
   <section class="method scheme-cool tx-graph" id="method" data-screen-label="The 30/90 Method">
     <div class="wrap">
@@ -233,6 +324,14 @@
           <h2>Live in 30 days. <span class="hl-teal">Adopted in 90.</span></h2>
           <p class="lede">The move isn't done when the system goes live. It's done when your team is running on it. So your plan treats day 31 to 90 as the real work, with three clear steps and no surprises.</p>
         </div>
+        <div class="plan-why reveal d1">
+          <div class="ss-bar" role="img" aria-label="Implementation success is about 40 percent planning, 40 percent adoption, and 20 percent technology">
+            <div class="ss-seg gold" style="flex:40"><b class="num">40%</b><span>Planning</span></div>
+            <div class="ss-seg gold2" style="flex:40"><b class="num">40%</b><span>Adoption</span></div>
+            <div class="ss-seg muted" style="flex:20"><b class="num">20%</b><span>Technology</span></div>
+          </div>
+          <p class="ss-cap">Implementation success is about 40% planning, 40% adoption, and only 20% technology. So that is how we spend the time.</p>
+        </div>
         <div class="reveal d1">
           <div class="rail-scale">
             <span class="rail-flag start">Day <span class="num">1</span></span>
@@ -240,13 +339,17 @@
             <span class="rail-flag adopt">Day <span class="num">90</span> · Adopted</span>
           </div>
           <div class="method-rail">
-            <div class="phase"><span class="phase-node"></span><span class="phase-days">Days 1–10</span><h4>Clarity</h4><p>We map how your deals actually move, before touching a setting.</p></div>
-            <div class="phase"><span class="phase-node"></span><span class="phase-days">Days 11–30</span><h4>Structure</h4><p>Pipelines, automation, data, reporting, reviewed with you weekly.</p></div>
-            <div class="phase"><span class="phase-node"></span><span class="phase-days">Days 31–60</span><h4>Execution</h4><p>Training, office hours, fixes within a day. Your team adopts it.</p></div>
-            <div class="phase"><span class="phase-node"></span><span class="phase-days">Days 61–90</span><h4>Momentum</h4><p>We watch real usage, cut the dead weight, sharpen what works.</p></div>
+            <div class="phase"><span class="phase-node"></span><span class="phase-days">Days 1–10</span><h4>Clarity</h4><p>We map how your deals actually move, before touching a setting. You get a written build plan: pipeline stages, data decisions, and the scoreboard leadership will run on.</p></div>
+            <div class="phase"><span class="phase-node"></span><span class="phase-days">Days 11–30</span><h4>Structure</h4><p>Pipelines, automation, data, and reporting, built and reviewed with you weekly. You get a working portal that mirrors how you sell, not a template.</p></div>
+            <div class="phase"><span class="phase-node"></span><span class="phase-days">Days 31–60</span><h4>Execution</h4><p>Role-based training, office hours, and fixes within a day. You get a team that knows what to do Monday morning.</p></div>
+            <div class="phase"><span class="phase-node"></span><span class="phase-days">Days 61–90</span><h4>Momentum</h4><p>We track real usage, cut the dead weight, and sharpen what works. You get adoption numbers, not anecdotes.</p></div>
           </div>
+          <p class="plan-close">Go-live is the starting line, not the finish.</p>
         </div>
-        <a class="btn btn-primary reveal d1" href="contact.html" style="align-self: flex-start;">Book a call <span class="arrow">→</span></a>
+        <div class="cta-row reveal d1" style="align-self: flex-start;">
+          <a class="btn btn-gold" href="assessment.html">Take the 4-min assessment <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="contact.html">Book a call</a>
+        </div>
       </div>
     </div>
   </section>
@@ -303,6 +406,11 @@
           <div class="metric"><span class="num" data-target="20" data-suffix="%">20%</span><span>faster deal cycle</span></div>
         </div>
       </div>
+      <a class="case-second reveal d1" href="case-studies.html#affordable-blinds">
+        <span class="case-second-num"><span class="num teal" data-target="60" data-suffix="%">60%</span><span>faster quotes</span></span>
+        <span class="case-second-text"><b>Affordable Blinds</b><span>A Costco-approved field-service manufacturer cut quote turnaround 60% and manual admin 30% after we rebuilt HubSpot around how they actually work.</span></span>
+        <span class="case-second-cta">Read the story <span class="arrow">→</span></span>
+      </a>
     </div>
   </section>
 
@@ -384,11 +492,19 @@
       <div class="faq-list reveal d1">
         <details class="faq-item" open>
           <summary class="faq-q">How fast can we actually be live?<span class="faq-ico"></span></summary>
-          <p class="faq-a">Thirty days to a working system, guaranteed. If we miss it, we keep working at no cost until you're live. Full adoption follows through day 90.</p>
+          <p class="faq-a">Thirty days to a working system, guaranteed. If we miss it for reasons on our side, we keep working at no cost until you're live. Full adoption follows through day 90.</p>
         </details>
         <details class="faq-item">
           <summary class="faq-q">What does it cost?<span class="faq-ico"></span></summary>
           <p class="faq-a">Scope drives price, so we quote after a 30-minute call, not before. What's fixed is the timeline: 30 days to live, with the guarantee behind it. That time-certainty is the risk-reducer most agencies can't offer.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">What do you need from us to hit the 30 days?<span class="faq-ico"></span></summary>
+          <p class="faq-a">A named decision-maker, data access in the first week, and your team's time for training. You get a one-page checklist before kickoff. Hold up your side and the date holds, which is exactly what makes the guarantee possible.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Who actually does the work?<span class="faq-ico"></span></summary>
+          <p class="faq-a">The person you meet on the first call stays with you through go-live and the first 90 days. You will always know who is in your portal.</p>
         </details>
         <details class="faq-item">
           <summary class="faq-q">We were burned by our last agency. Why is this different?<span class="faq-ico"></span></summary>
@@ -397,6 +513,18 @@
         <details class="faq-item">
           <summary class="faq-q">Can you migrate us without losing our data?<span class="faq-ico"></span></summary>
           <p class="faq-a">Yes. Whether you're on Salesforce, Pipedrive, or spreadsheets, we audit everything first, rehearse the migration in a sandbox, then run it side-by-side so nothing drops. Your history and reports come with you.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">What if our data is a mess?<span class="faq-ico"></span></summary>
+          <p class="faq-a">Then we found the real project. Data triage is built into the first phase. We move what is worth moving and leave the rest behind.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Do you replace HubSpot's own onboarding?<span class="faq-ico"></span></summary>
+          <p class="faq-a">Yes, and your HubSpot onboarding fee is typically waived when a partner delivers. HubSpot advises, we build.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">What happens after the first 90 days?<span class="faq-ico"></span></summary>
+          <p class="faq-a">Most clients move to a RevOps rhythm: quarterly goals, monthly reviews. Some run it themselves. Both are wins.</p>
         </details>
         <details class="faq-item">
           <summary class="faq-q">Do you help with marketing too, or just the CRM?<span class="faq-ico"></span></summary>
@@ -417,8 +545,8 @@
         <h2 class="reveal d1">Let's get your team <span class="hl-teal">running on it</span>.</h2>
         <p class="lede reveal d2">Thirty minutes, no pitch deck. You talk, we listen, and you leave with a point of view either way.</p>
         <div class="cta-row reveal d2">
-          <a class="btn btn-gold" href="contact.html">Book a call <span class="arrow">→</span></a>
-          <a class="btn btn-ghost" href="assessment.html">Take the 4-min assessment</a>
+          <a class="btn btn-gold" href="assessment.html">Take the 4-min assessment <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="contact.html">Book a call</a>
         </div>
         <span class="guar-chip reveal d2">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
@@ -438,6 +566,7 @@
         <a class="logo-link" href="#top"><img class="logo-img" src="assets/logo/serendipity-logo-white.png" alt="Serendipity"></a>
         <p>We make the move to HubSpot, done right. Wherever you're starting, we make it smooth, make it stick, and grow your business on it.</p>
         <img class="footer-badge" src="assets/badges/hubspot-platinum-badge.png" alt="HubSpot Platinum Solutions Partner">
+        <img class="footer-mark" src="assets/brand/convergence-mark-dark.svg" alt="" aria-hidden="true">
       </div>
       <div>
         <h4>Services</h4>
@@ -454,6 +583,7 @@
         <ul>
           <li><a href="case-studies.html">Case Studies</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="careers.html">Careers</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
@@ -474,5 +604,11 @@
 </footer>
 <script src="js/main.js"></script>
 
+<script type="application/ld+json">
+{"@context": "https://schema.org","@type": "Organization","name": "Serendipity","description": "Practical HubSpot growth partner. We help B2B teams build the funnel and drive revenue on a CRM their team actually uses.","slogan": "Build the funnel. Drive revenue.","url": "https://createserendipity.com/","logo": "https://createserendipity.com/assets/logo/serendipity-logo.png","email": "hello@createserendipity.com"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "How fast can we actually be live?","acceptedAnswer": {"@type": "Answer","text": "Thirty days to a working system, guaranteed. If we miss it for reasons on our side, we keep working at no cost until you're live. Full adoption follows through day 90."}},{"@type": "Question","name": "What does it cost?","acceptedAnswer": {"@type": "Answer","text": "Scope drives price, so we quote after a 30-minute call, not before. What's fixed is the timeline: 30 days to live, with the guarantee behind it. That time-certainty is the risk-reducer most agencies can't offer."}},{"@type": "Question","name": "What do you need from us to hit the 30 days?","acceptedAnswer": {"@type": "Answer","text": "A named decision-maker, data access in the first week, and your team's time for training. You get a one-page checklist before kickoff. Hold up your side and the date holds, which is exactly what makes the guarantee possible."}},{"@type": "Question","name": "Who actually does the work?","acceptedAnswer": {"@type": "Answer","text": "The person you meet on the first call stays with you through go-live and the first 90 days. You will always know who is in your portal."}},{"@type": "Question","name": "We were burned by our last agency. Why is this different?","acceptedAnswer": {"@type": "Answer","text": "Most agencies hand off after setup. We measure adoption and stay until your team is using the system. Portal Rescue exists specifically for teams the last agency left behind."}},{"@type": "Question","name": "Can you migrate us without losing our data?","acceptedAnswer": {"@type": "Answer","text": "Yes. Whether you're on Salesforce, Pipedrive, or spreadsheets, we audit everything first, rehearse the migration in a sandbox, then run it side-by-side so nothing drops. Your history and reports come with you."}},{"@type": "Question","name": "What if our data is a mess?","acceptedAnswer": {"@type": "Answer","text": "Then we found the real project. Data triage is built into the first phase. We move what is worth moving and leave the rest behind."}},{"@type": "Question","name": "Do you replace HubSpot's own onboarding?","acceptedAnswer": {"@type": "Answer","text": "Yes, and your HubSpot onboarding fee is typically waived when a partner delivers. HubSpot advises, we build."}},{"@type": "Question","name": "What happens after the first 90 days?","acceptedAnswer": {"@type": "Answer","text": "Most clients move to a RevOps rhythm: quarterly goals, monthly reviews. Some run it themselves. Both are wins."}},{"@type": "Question","name": "Do you help with marketing too, or just the CRM?","acceptedAnswer": {"@type": "Answer","text": "Both, in sequence. We get the system solid first, then grow on it with inbound and demand gen: ABM, account targeting, content, and lead routing. Growth works better on a foundation that holds."}}]}
+</script>
 </body>
 </html>

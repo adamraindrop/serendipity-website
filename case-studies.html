@@ -28,7 +28,7 @@
 
 <header class="site-header" data-screen-label="Header">
   <div class="wrap">
-    <a class="logo-link" href="index.html" aria-label="Serendipity home"><img class="logo-img" src="assets/logo/serendipity-logo.png" alt="Serendipity"></a>
+    <a class="logo-link" href="index.html" aria-label="Serendipity home"><img class="logo-img" src="assets/logo/serendipity-logo.png" alt="Serendipity"><span class="logo-tag">Build the funnel. Drive revenue.</span></a>
     <nav class="main-nav" id="mainNav">
       <a href="index.html#help">Services</a>
       <a href="case-studies.html" aria-current="page">Case Studies</a>
@@ -84,27 +84,37 @@
     </div>
   </section>
 
-  <!-- 3 · Coming soon -->
-  <section class="scheme-cream tx-dots" data-screen-label="Coming soon">
+  <!-- 3 · Featured: Affordable Blinds -->
+  <section class="cs-featured scheme-cream tx-dots" id="affordable-blinds" data-screen-label="Affordable Blinds case study">
     <div class="wrap">
-      <div class="section-head center reveal">
-        <h2>More stories, <span class="hl-gold">publishing soon</span>.</h2>
-        <p class="lede">We only publish a case study once the client has signed off on the numbers. Two are in the works.</p>
+      <div class="section-head reveal" style="margin-bottom: var(--s-5);">
+        <p class="eyebrow">Case study · Affordable Blinds</p>
+        <h2>A Costco-approved field-service team cut quote turnaround by <span class="hl-teal">60%</span>.</h2>
+        <p class="lede">A manufacturing and field-service business buried in manual quoting and handoffs. We rebuilt HubSpot around how their office and crews actually work.</p>
       </div>
-      <div class="soon-grid reveal d1">
-        <div class="soon-card">
-          <span class="soon-tag">Financial services</span>
-          <h3>One source of truth for a 6-person RevOps team.</h3>
-          <p>A growing firm consolidated three disconnected tools into HubSpot and gave leadership a single, trusted view of the pipeline.</p>
-          <span class="soon-status">Publishing soon</span>
+      <div class="case-card cs-built reveal d1">
+        <div class="cs-story">
+          <div class="cs-pbo">
+            <div class="pbo-item"><span class="pbo-tag">Problem</span><p>Quotes crawled through manual steps and email chains. Admin piled up, communication slipped between the office and the field, and projects stalled waiting on the next handoff.</p></div>
+            <div class="pbo-item"><span class="pbo-tag">Build</span><p>We customized HubSpot to fit their workflows: structured quoting, clear stages, and automation that routes work to the right person and keeps the office and crews in sync.</p></div>
+            <div class="pbo-item"><span class="pbo-tag">Outcome</span><p>Faster quotes, far less manual admin, and a measurable lift in day-to-day operational efficiency.</p></div>
+          </div>
+          <blockquote class="case-quote">“They customized HubSpot to fit our workflows, <span class="mark-it">reducing bottlenecks, improving communication, and helping projects move faster</span>.”</blockquote>
+          <div class="case-by"><div class="by-text"><b>Affordable Blinds</b><span>Manufacturing · field service</span></div></div>
         </div>
-        <div class="soon-card">
-          <span class="soon-tag">B2B SaaS</span>
-          <h3>Salesforce to HubSpot with zero data loss.</h3>
-          <p>A rehearsed migration moved years of history and reporting without a day of downtime for the revenue team.</p>
-          <span class="soon-status">Publishing soon</span>
+        <div class="case-metrics">
+          <div class="metric"><span class="num gold" data-target="60" data-suffix="%">60%</span><span>faster quote turnaround</span></div>
+          <div class="metric"><span class="num" data-target="30" data-suffix="%">30%</span><span>less manual admin</span></div>
+          <div class="metric"><span class="num" data-target="50" data-suffix="%">50%</span><span>operational efficiency gain</span></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- 3.5 · More publishing soon (single honest line, no fake cards) -->
+  <section class="scheme-white" data-screen-label="More soon">
+    <div class="wrap">
+      <p class="more-soon reveal">More stories publish as clients sign off on the numbers. We only show results a client has approved, so this list grows the honest way.</p>
     </div>
   </section>
 
@@ -146,6 +156,7 @@
         <a class="logo-link" href="index.html"><img class="logo-img" src="assets/logo/serendipity-logo-white.png" alt="Serendipity"></a>
         <p>We make the move to HubSpot, done right. Wherever you're starting, we make it smooth, make it stick, and grow your business on it.</p>
         <img class="footer-badge" src="assets/badges/hubspot-platinum-badge.png" alt="HubSpot Platinum Solutions Partner">
+        <img class="footer-mark" src="assets/brand/convergence-mark-dark.svg" alt="" aria-hidden="true">
       </div>
       <div>
         <h4>Services</h4>
@@ -162,6 +173,7 @@
         <ul>
           <li><a href="case-studies.html">Case Studies</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="careers.html">Careers</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
         </ul>
       </div>
@@ -181,5 +193,11 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script type="application/ld+json">
+{"@context": "https://schema.org","@type": "Review","itemReviewed": {"@type": "Organization","name": "Serendipity"},"author": {"@type": "Organization","name": "Perricone Farms"},"reviewBody": "Every agency promised us a system. Serendipity was the first that stayed until our team used it.","reviewRating": {"@type": "Rating","ratingValue": "5","bestRating": "5"}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org","@type": "Review","itemReviewed": {"@type": "Organization","name": "Serendipity"},"author": {"@type": "Organization","name": "Affordable Blinds"},"reviewBody": "They customized HubSpot to fit our workflows, reducing bottlenecks, improving communication, and helping projects move faster.","reviewRating": {"@type": "Rating","ratingValue": "5","bestRating": "5"}}
+</script>
 </body>
 </html>
