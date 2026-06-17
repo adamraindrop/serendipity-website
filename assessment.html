@@ -19,6 +19,7 @@
 <meta property="og:description" content="How ready is your business for HubSpot? A 4-minute, 24-question self-diagnostic across the seven areas where implementations succeed or fail. Instant score, no portal access needed.">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sections.css">
 <link rel="stylesheet" href="css/assessment.css">
 <link rel="stylesheet" href="css/site.css">
 </head>
@@ -44,50 +45,77 @@
 </header>
 
 <main class="assess-shell">
-  <div class="assess-wrap">
 
-    <!-- ============ INTRO ============ -->
-    <section id="intro">
-      <p class="a-kicker">The Readiness Score</p>
-      <span class="a-badge">Free · about 4 minutes · No HubSpot access needed</span>
-      <h1>How ready is your business for <span class="hl-gold">HubSpot</span>?</h1>
-      <p class="a-lede">Half of CRM implementations fail, and it's almost never the software. It's the seven readiness areas underneath it. Answer 24 quick, plain-English questions about how your team actually works, and find out exactly where you stand before you spend a dollar.</p>
+  <!-- ============ INTRO (branded landing) ============ -->
+  <div id="intro">
 
-      <h2 class="a-h2">What you'll get instantly</h2>
-      <div class="a-cards">
-        <div class="a-card"><div class="a-num">01</div><b>Your Readiness Score</b><span>A 0–100 score and named stage, benchmarked against companies your size and industry.</span></div>
-        <div class="a-card"><div class="a-num">02</div><b>Your 7-area breakdown</b><span>Where you're strong and where implementations actually fail: data, sales, reporting, adoption, and more.</span></div>
-        <div class="a-card"><div class="a-num">03</div><b>Where to start, and why</b><span>A specific recommendation for the right first move for your business, with the reasoning behind it.</span></div>
+    <!-- Hero -->
+    <section class="assess-hero scheme-cream tx-dots" data-screen-label="Assessment hero">
+      <div class="wrap assess-hero-grid">
+        <div class="assess-hero-copy reveal">
+          <p class="eyebrow">The Readiness Score</p>
+          <h1>How ready is your business for <span class="hl-gold">HubSpot</span>?</h1>
+          <p class="a-lede">Half of CRM implementations fail, and it's almost never the software. It's the seven readiness areas underneath. Answer 24 quick, plain-English questions and find out exactly where you stand, before you spend a dollar.</p>
+          <div class="assess-pills">
+            <span class="pill-gold pill">4 minutes</span>
+            <span class="pill-gold pill">24 questions</span>
+            <span class="pill-gold pill">No portal access</span>
+          </div>
+          <div class="assess-hero-cta">
+            <button class="btn btn-gold" onclick="SQ.startQuiz()">Get my Readiness Score <span class="arrow">→</span></button>
+            <button class="assess-preview-link" onclick="SQ.demoScorecard()">Preview a sample scorecard <span class="arrow">→</span></button>
+          </div>
+        </div>
+        <div class="assess-hero-media reveal d1">
+          <img src="assets/imagery/lifestyle/01-dashboard-review.png" alt="A team reviewing their CRM readiness together" decoding="async">
+          <div class="assess-hero-dial" aria-hidden="true">
+            <div class="dial-mini">
+              <svg width="62" height="62" viewBox="0 0 62 62"><circle cx="31" cy="31" r="25" fill="none" stroke="#E7E3DA" stroke-width="6"/><circle cx="31" cy="31" r="25" fill="none" stroke="#C8902F" stroke-width="6" stroke-linecap="round" stroke-dasharray="157" stroke-dashoffset="61" transform="rotate(-90 31 31)"/></svg>
+              <b class="num">61</b>
+            </div>
+            <div class="dial-mini-text"><b>Sample score</b><span>Ready to Build</span></div>
+          </div>
+        </div>
       </div>
-
-      <h2 class="a-h2">Why take it</h2>
-      <div class="why-list">
-        <div class="why-item"><div class="dot"></div><div><b>The failures are predictable.</b> CRM projects don't fail at random, they fail in the same seven areas, in the same ways. Four minutes now shows you which ones would bite you.</div></div>
-        <div class="why-item"><div class="dot"></div><div><b>The answers are useful even if we never talk.</b> You'll see your score the moment you finish, and the full scorecard (risks, radar, fix-first plan) is yours to act on with or without us.</div></div>
-        <div class="why-item"><div class="dot"></div><div><b>If you do book a call, it starts at the plan, not a pitch.</b> Your scorecard means the conversation begins where most discovery calls end: with your situation already mapped.</div></div>
-      </div>
-
-      <div class="howstrip">
-        <span>24 plain-English questions</span><span>About 4 minutes</span><span>No jargon, no portal access</span><span>Results on the spot</span>
-      </div>
-      <p class="a-built">Built for founders, sales leaders, and ops leaders at growing B2B companies, whether you have no CRM, you're on Salesforce, or you own HubSpot and know you're not getting full value.</p>
-
-      <button class="btn btn-gold" onclick="SQ.startQuiz()">Get my Readiness Score <span class="arrow">→</span></button>
-
-      <button class="sample-callout" onclick="SQ.demoScorecard()">
-        <span class="thumb">
-          <svg width="80" height="80" viewBox="0 0 92 92" aria-hidden="true">
-            <polygon points="46,18 68,34 62,62 30,64 22,40" fill="none" stroke="#E2E8EE"/>
-            <polygon points="46,29 60,38 56,55 36,57 31,43" fill="none" stroke="#E2E8EE"/>
-            <polygon points="46,22.6 63.9,36.9 57.7,58.9 33.4,60.4 25.8,41.6" fill="rgba(233,180,76,.2)" stroke="#C8902F" stroke-width="2"/>
-            <circle cx="46" cy="22.6" r="2.6" fill="#C8902F"/><circle cx="63.9" cy="36.9" r="2.6" fill="#C8902F"/><circle cx="57.7" cy="58.9" r="2.6" fill="#C8902F"/><circle cx="33.4" cy="60.4" r="2.6" fill="#C8902F"/><circle cx="25.8" cy="41.6" r="2.6" fill="#C8902F"/>
-          </svg>
-          <span class="chip">57</span>
-        </span>
-        <span class="sc-body"><b>Curious what you'll get? Preview a sample scorecard</b><span>See the full results page, score, 7-area radar, critical risks, and the where-to-start plan, for a sample manufacturing company on Salesforce. No questions, no email.</span></span>
-        <span class="go">Preview →</span>
-      </button>
     </section>
+
+    <!-- What you'll get -->
+    <section class="scheme-white" data-screen-label="What you get">
+      <div class="wrap">
+        <div class="section-head center reveal" style="margin:0 auto var(--s-6);">
+          <h2>What you'll get <span class="hl-gold">instantly</span>.</h2>
+        </div>
+        <div class="a-cards reveal d1">
+          <div class="a-card"><div class="a-num">01</div><b>Your Readiness Score</b><span>A 0–100 score and named stage, benchmarked against companies your size and industry.</span></div>
+          <div class="a-card"><div class="a-num">02</div><b>Your 7-area breakdown</b><span>Where you're strong and where implementations actually fail: data, sales, reporting, adoption, and more.</span></div>
+          <div class="a-card"><div class="a-num">03</div><b>Where to start, and why</b><span>A specific recommendation for the right first move for your business, with the reasoning behind it.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why take it -->
+    <section class="scheme-cream tx-dots" data-screen-label="Why take it">
+      <div class="wrap">
+        <div class="section-head center reveal" style="margin:0 auto var(--s-6);">
+          <h2>Why take it.</h2>
+          <p class="lede">Built for founders, sales leaders, and ops leaders at growing B2B companies, whether you have no CRM, you're on Salesforce, or you own HubSpot and know you're not getting full value.</p>
+        </div>
+        <div class="why-grid reveal d1">
+          <div class="why-item"><div class="dot"></div><div><b>The failures are predictable.</b> CRM projects don't fail at random, they fail in the same seven areas, in the same ways. Four minutes shows you which ones would bite you.</div></div>
+          <div class="why-item"><div class="dot"></div><div><b>Useful even if we never talk.</b> You'll see your score the moment you finish, and the full scorecard, risks, radar, and fix-first plan, is yours to act on with or without us.</div></div>
+          <div class="why-item"><div class="dot"></div><div><b>If you do book a call, it starts at the plan.</b> Your scorecard means the conversation begins where most discovery calls end: with your situation already mapped.</div></div>
+        </div>
+        <div class="assess-hero-cta center reveal d1">
+          <button class="btn btn-gold" onclick="SQ.startQuiz()">Get my Readiness Score <span class="arrow">→</span></button>
+          <button class="assess-preview-link" onclick="SQ.demoScorecard()">Preview a sample scorecard <span class="arrow">→</span></button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ FLOW (focused quiz column) ============ -->
+  <div class="assess-wrap hidden">
 
     <!-- ============ QUIZ ============ -->
     <section id="quiz" class="hidden">

@@ -84,7 +84,14 @@ const TOTAL=QUALS.length+QS.length;
 const $=id=>document.getElementById(id);
 
 function startQuiz(){show("quiz");renderQual();}
-function show(id){["intro","quiz","gate","results"].forEach(s=>$(s).classList.add("hidden"));$(id).classList.remove("hidden");window.scrollTo({top:0});}
+function show(id){
+  // intro is the branded landing (outside .assess-wrap); quiz/gate/results live inside it
+  $("intro").classList.toggle("hidden", id!=="intro");
+  var wrap=document.querySelector(".assess-wrap");
+  if(wrap) wrap.classList.toggle("hidden", id==="intro");
+  ["quiz","gate","results"].forEach(s=>$(s).classList.toggle("hidden", s!==id));
+  window.scrollTo({top:0});
+}
 function setProgress(done){
   $("barfill").style.width=(done/TOTAL*100)+"%";
   const left=TOTAL-done, mins=Math.max(1,Math.ceil(left*10/60));
