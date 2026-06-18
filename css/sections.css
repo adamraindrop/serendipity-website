@@ -395,3 +395,13 @@
 .luke-photo img{object-fit:cover;}
 .hero-bg img{object-position:72% center;}
 .cert-badge img{object-fit:contain;}
+
+/* ===== Grow Better Blueprint (homepage owned-framework section) ===== */
+.blueprint .section-head.center { margin-bottom: var(--s-6); }
+.blueprint-figure { margin: 0 auto; max-width: 880px; }
+.blueprint-figure img { width: 100%; height: auto; display: block; }
+.blueprint-foot { max-width: 760px; margin: var(--s-6) auto 0; display: flex; flex-direction: column; align-items: center; gap: var(--s-4); text-align: center; }
+.blueprint-here { font-size: var(--fs-body); color: var(--c-ink-2); line-height: 1.6; max-width: 58ch; }
+.bh-pin { display: inline-block; background: var(--c-marker); color: var(--c-navy); font-family: var(--ff-heading); font-weight: 700; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; margin-right: 9px; vertical-align: middle; }
+.blueprint-foot .cta-row { justify-content: center; }
+@media (max-width: 720px) { .blueprint-figure { max-width: 520px; } }

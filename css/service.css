@@ -1,0 +1,94 @@
+/* ============================================================
+   Serendipity — Service pages (Implementation, Migration,
+   Portal Rescue, RevOps, Demand Gen, Alignment) + Services index.
+   Service-specific components only. Inherits tokens/base/sections/pages.
+   ============================================================ */
+
+/* ---------- Service hero (2-col: copy + framed screenshot) ---------- */
+.svc-hero { padding: clamp(64px, 8vw, 116px) 0 clamp(48px, 6vw, 84px); position: relative; overflow: hidden; }
+.svc-hero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1.04fr 0.96fr; gap: clamp(36px, 5vw, 76px); align-items: center; }
+.svc-hero-copy { display: flex; flex-direction: column; gap: var(--s-3); align-items: flex-start; max-width: 36em; }
+.svc-hero-copy h1 { font-size: clamp(36px, 4.6vw, 60px); }
+.svc-hero-copy .lede { max-width: 34em; }
+.svc-hero .hero-cta { display: flex; gap: var(--s-2); flex-wrap: wrap; margin-top: var(--s-1); }
+.svc-chip { display: inline-flex; align-items: center; gap: 9px; font-family: var(--ff-heading); font-size: 13px; font-weight: 600; color: var(--c-on-dark-2); margin-top: var(--s-1); }
+.svc-chip .stars { color: var(--c-marker); letter-spacing: 1px; }
+.svc-chip b { color: var(--c-on-dark); }
+
+/* ---------- Browser-framed screenshot ---------- */
+.svc-frame { border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-card-hover); border: 1px solid rgba(244,247,249,0.16); background: #fff; }
+.svc-frame-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: #0e2738; border-bottom: 1px solid rgba(244,247,249,0.08); }
+.svc-frame-bar i { width: 9px; height: 9px; border-radius: 50%; background: #2c4356; }
+.svc-frame-bar span { margin-left: 10px; font-family: var(--ff-heading); font-size: 12px; font-weight: 600; color: #6b7f90; }
+.svc-frame-shot { display: block; width: 100%; height: auto; }
+.scheme-white .svc-frame, .scheme-cream .svc-frame, .scheme-cool .svc-frame { border-color: var(--c-line-cool); }
+
+/* ---------- How we help: depth bullets ---------- */
+.svc-help-list { list-style: none; margin: var(--s-4) 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; max-width: 64ch; }
+.svc-help-list li { position: relative; padding-left: 30px; color: var(--c-ink-2); font-size: var(--fs-body); line-height: 1.6; }
+.svc-help-list li::before { content: ""; position: absolute; left: 0; top: 8px; width: 14px; height: 14px; border-radius: 50%; background: var(--c-accent-soft); border: 1.5px solid var(--c-accent); }
+.scheme-navy .svc-help-list li { color: var(--c-on-dark-2); }
+.scheme-navy .svc-help-list li::before { background: rgba(58,166,174,0.18); border-color: var(--c-teal-light); }
+
+/* ---------- What's included (two columns: get / need) ---------- */
+.incl-grid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: var(--s-4); margin-top: var(--s-6); align-items: start; }
+.incl-col { background: var(--c-surface); border: 1px solid var(--c-line-cool); border-radius: var(--r-card); padding: clamp(24px, 2.8vw, 36px); box-shadow: var(--shadow-card); }
+.incl-col.need { background: var(--c-cool); border-color: var(--c-line-cool); box-shadow: none; }
+.incl-col h3 { font-size: clamp(19px, 2vw, 23px); margin-bottom: var(--s-3); }
+.incl-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 13px; }
+.incl-list li { position: relative; padding-left: 30px; font-size: var(--fs-sm); color: var(--c-ink-2); line-height: 1.55; }
+.incl-list li svg { position: absolute; left: 0; top: 2px; color: var(--c-teal); }
+.incl-col.need .incl-list li svg { color: var(--c-accent); }
+
+/* ---------- Adoption gauge (26% industry vs 100% our clients) ---------- */
+.adopt-gauge { max-width: 560px; margin: var(--s-6) 0 0; display: flex; flex-direction: column; gap: var(--s-3); }
+.ag-row { display: grid; grid-template-columns: 130px 1fr 52px; align-items: center; gap: 14px; }
+.ag-label { font-family: var(--ff-heading); font-size: 13px; font-weight: 600; color: var(--c-ink-2); }
+.ag-track { height: 16px; border-radius: 999px; background: var(--c-cool); overflow: hidden; }
+.ag-fill { height: 100%; border-radius: 999px; }
+.ag-fill.muted { background: #C9D2DA; }
+.ag-fill.gold { background: var(--c-marker); }
+.ag-val { font-family: var(--ff-display); font-weight: 500; font-size: 21px; color: var(--c-ink); text-align: right; }
+.ag-row.us .ag-label, .ag-row.us .ag-val { color: var(--c-marker-deep); }
+.ag-cap { font-size: 13px; color: var(--c-ink-3); }
+.scheme-navy .ag-track { background: rgba(244,247,249,0.12); }
+.scheme-navy .ag-label { color: var(--c-on-dark-2); }
+.scheme-navy .ag-val { color: var(--c-on-dark); }
+.scheme-navy .ag-row.us .ag-label, .scheme-navy .ag-row.us .ag-val { color: var(--c-marker); }
+
+/* ---------- Comparison table (AEO) ---------- */
+.cmp-wrap { max-width: 820px; margin: var(--s-6) auto 0; overflow-x: auto; }
+.cmp-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); background: var(--c-surface); border: 1px solid var(--c-line-cool); border-radius: var(--r-card); overflow: hidden; }
+.cmp-table th, .cmp-table td { text-align: left; padding: 15px 20px; border-bottom: 1px solid var(--c-line-cool); vertical-align: top; }
+.cmp-table thead th { font-family: var(--ff-heading); font-size: 12.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--c-ink); background: var(--c-cool); }
+.cmp-table thead th.ours { color: var(--c-accent); }
+.cmp-table tbody th { font-family: var(--ff-heading); font-weight: 600; color: var(--c-ink); font-size: 14px; }
+.cmp-table td { color: var(--c-ink-2); }
+.cmp-table td.ours { color: var(--c-ink); font-weight: 500; }
+.cmp-table tr:last-child th, .cmp-table tr:last-child td { border-bottom: none; }
+
+/* ---------- Service FAQ (single column, reuses faq-item) ---------- */
+.svc-faq { max-width: 820px; margin: 0 auto; }
+.svc-faq .faq-list { margin-top: var(--s-4); }
+
+/* ---------- Services index ---------- */
+.svc-index-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-3); margin-top: var(--s-6); }
+.svc-index-card { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; background: var(--c-surface); border: 1px solid var(--c-line-cool); border-radius: var(--r-card); padding: clamp(26px, 3vw, 38px); box-shadow: var(--shadow-card); text-decoration: none; border-top: 3px solid var(--c-accent); transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
+.svc-index-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-card-hover); text-decoration: none; }
+.svc-index-card.grow { border-top-color: var(--c-teal); }
+.svc-index-card .si-step { font-family: var(--ff-heading); font-size: 11.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--c-ink-3); }
+.svc-index-card h3 { font-size: clamp(20px, 2.1vw, 25px); color: var(--c-ink); }
+.svc-index-card p { font-size: var(--fs-sm); color: var(--c-ink-2); line-height: 1.55; }
+.svc-index-card .si-go { margin-top: auto; font-family: var(--ff-heading); font-weight: 600; font-size: 14.5px; color: var(--c-accent); display: inline-flex; align-items: center; gap: 7px; }
+.svc-index-card.grow .si-go { color: var(--c-teal); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .svc-hero .wrap { grid-template-columns: 1fr; }
+  .svc-hero-media { order: -1; max-width: 560px; }
+  .incl-grid, .svc-index-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .ag-row { grid-template-columns: 96px 1fr 44px; gap: 10px; }
+  .ag-label { font-size: 12px; }
+}

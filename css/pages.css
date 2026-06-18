@@ -171,3 +171,24 @@
   .ss-seg b { font-size: 22px; }
   .ss-seg span { font-size: 10px; }
 }
+
+/* ---------- Grow Better Blueprint page ---------- */
+.simple-item.teal { border-top-color: var(--c-teal); }
+.bp-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); margin: var(--s-6) auto var(--s-6); max-width: 1040px; }
+.bp-step { background: var(--c-surface); border: 1px solid var(--c-line-cool); border-radius: var(--r-card); padding: clamp(22px, 2.4vw, 30px); display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow-card); }
+.bp-num { font-family: var(--ff-display); font-weight: 500; font-size: 30px; line-height: 1; color: var(--c-marker-deep); }
+.bp-step:last-child .bp-num { color: var(--c-teal); }
+.bp-step h4 { font-size: clamp(18px, 1.9vw, 22px); }
+.bp-step p { font-size: var(--fs-sm); color: var(--c-ink-2); line-height: 1.55; }
+.bp-hubs { max-width: 64ch; margin: var(--s-5) auto 0; color: var(--c-ink-2); font-size: var(--fs-sm); line-height: 1.62; text-align: center; }
+.scheme-navy .bp-hubs { color: var(--c-on-dark-2); }
+
+.proof-duo { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3); }
+.proof-card { background: var(--c-surface); border: 1px solid var(--c-line-cool); border-radius: var(--r-card); padding: clamp(26px, 3vw, 38px); display: flex; flex-direction: column; gap: 4px; box-shadow: var(--shadow-card); border-top: 3px solid var(--c-accent); }
+.proof-card:last-child { border-top-color: var(--c-teal); }
+.proof-name { font-family: var(--ff-heading); font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--c-ink-3); }
+.proof-stat { font-family: var(--ff-display); font-weight: 500; font-size: clamp(40px, 5vw, 60px); line-height: 1.02; color: var(--c-accent); }
+.proof-stat.teal { color: var(--c-teal); }
+.proof-stat-label { font-family: var(--ff-heading); font-size: 14px; font-weight: 600; color: var(--c-ink); margin-bottom: 10px; }
+.proof-card p { font-size: var(--fs-sm); color: var(--c-ink-2); line-height: 1.6; }
+@media (max-width: 900px) { .bp-steps, .proof-duo { grid-template-columns: 1fr; } }

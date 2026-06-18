@@ -1,0 +1,23 @@
+<svg viewBox="0 78 720 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Grow Better Blueprint: a journey from first build into the Attract, Engage, Convert, Delight flywheel with RevOps at the center">
+<path d="M86 262 L214 224 L342 186 C 412 182 434 190 473 202" fill="none" stroke="#175477" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M467 195 l8 7 -8 7" fill="none" stroke="#175477" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="86" cy="262" r="9" fill="#fff" stroke="#175477" stroke-width="2.4"/>
+<text x="86" y="292" text-anchor="middle" font-family="Archivo,sans-serif" font-size="12.5" font-weight="600" fill="#0B2233">Build momentum</text>
+<circle cx="214" cy="224" r="9" fill="#fff" stroke="#175477" stroke-width="2.4"/>
+<text x="214" y="254" text-anchor="middle" font-family="Archivo,sans-serif" font-size="12.5" font-weight="600" fill="#0B2233">Begin with the end</text>
+<circle cx="342" cy="186" r="9" fill="#fff" stroke="#175477" stroke-width="2.4"/>
+<text x="342" y="216" text-anchor="middle" font-family="Archivo,sans-serif" font-size="12.5" font-weight="600" fill="#0B2233">Your 6 to 12 month plan</text>
+<rect x="42" y="208" width="88" height="24" rx="12" fill="#E9B44C"/><text x="86" y="225" text-anchor="middle" font-family="Archivo,sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.08em" fill="#0B2233">YOU ARE HERE</text><path d="M86 232 l-6 -8 12 0 z" fill="#E9B44C"/>
+<path d="M520.7 119.5 A104 104 0 0 1 647.3 119.5 L619.3 156.0 A58 58 0 0 0 548.7 156.0 Z" fill="#3AA6AE"/>
+<text x="584.0" y="124.5" text-anchor="middle" font-family="Archivo,sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.04em" fill="#fff">ATTRACT</text>
+<path d="M666.5 138.7 A104 104 0 0 1 666.5 265.3 L630.0 237.3 A58 58 0 0 0 630.0 166.7 Z" fill="#1B97A0"/>
+<text x="665.0" y="205.5" text-anchor="middle" font-family="Archivo,sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.04em" fill="#fff">ENGAGE</text>
+<path d="M647.3 284.5 A104 104 0 0 1 520.7 284.5 L548.7 248.0 A58 58 0 0 0 619.3 248.0 Z" fill="#0E7C86"/>
+<text x="584.0" y="286.5" text-anchor="middle" font-family="Archivo,sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.04em" fill="#fff">CONVERT</text>
+<path d="M501.5 265.3 A104 104 0 0 1 501.5 138.7 L538.0 166.7 A58 58 0 0 0 538.0 237.3 Z" fill="#0C6B74"/>
+<text x="503.0" y="205.5" text-anchor="middle" font-family="Archivo,sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.04em" fill="#fff">DELIGHT</text>
+<circle cx="584" cy="202" r="51" fill="#0B2233"/>
+<text x="584" y="200" text-anchor="middle" font-family="Archivo,sans-serif" font-size="15" font-weight="700" fill="#F8F6F1">RevOps</text>
+<text x="584" y="216" text-anchor="middle" font-family="Archivo,sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.1em" fill="#F8F6F1" opacity="0.66">AT THE CENTER</text>
+<text x="584" y="348" text-anchor="middle" font-family="Archivo,sans-serif" font-size="11" font-weight="600" fill="#51606E">Marketing · Sales · Service Hubs</text>
+</svg>

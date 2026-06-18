@@ -1,0 +1,12 @@
+<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Grow Better Blueprint mark">
+<path d="M24 108 L70 92 L116 76 C 144 74 155 72 170 78" fill="none" stroke="#3AA6AE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<circle cx="24" cy="108" r="4" fill="#0e2738" stroke="#3AA6AE" stroke-width="1.6"/>
+<circle cx="70" cy="92" r="4" fill="#0e2738" stroke="#3AA6AE" stroke-width="1.6"/>
+<circle cx="116" cy="76" r="4" fill="#0e2738" stroke="#3AA6AE" stroke-width="1.6"/>
+<circle cx="24" cy="108" r="2.4" fill="#E9B44C"/>
+<path d="M189.4 44.7 A42 42 0 0 1 240.6 44.7 L229.0 59.8 A23 23 0 0 0 201.0 59.8 Z" fill="#3AA6AE"/>
+<path d="M248.3 52.4 A42 42 0 0 1 248.3 103.6 L233.2 92.0 A23 23 0 0 0 233.2 64.0 Z" fill="#1B97A0"/>
+<path d="M240.6 111.3 A42 42 0 0 1 189.4 111.3 L201.0 96.2 A23 23 0 0 0 229.0 96.2 Z" fill="#0E7C86"/>
+<path d="M181.7 103.6 A42 42 0 0 1 181.7 52.4 L196.8 64.0 A23 23 0 0 0 196.8 92.0 Z" fill="#0C6B74"/>
+<circle cx="215" cy="78" r="17" fill="#0e2738"/>
+</svg>
