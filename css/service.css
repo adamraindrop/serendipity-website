@@ -41,7 +41,7 @@
 .incl-col.need .incl-list li svg { color: var(--c-accent); }
 
 /* ---------- Adoption gauge (26% industry vs 100% our clients) ---------- */
-.adopt-gauge { max-width: 560px; margin: var(--s-6) 0 0; display: flex; flex-direction: column; gap: var(--s-3); }
+.adopt-gauge { max-width: 560px; margin: var(--s-6) auto 0; display: flex; flex-direction: column; gap: var(--s-3); }
 .ag-row { display: grid; grid-template-columns: 130px 1fr 52px; align-items: center; gap: 14px; }
 .ag-label { font-family: var(--ff-heading); font-size: 13px; font-weight: 600; color: var(--c-ink-2); }
 .ag-track { height: 16px; border-radius: 999px; background: var(--c-cool); overflow: hidden; }
@@ -110,3 +110,6 @@
   .svc-help-split.ed-split { grid-template-columns: 1fr; }
   .svc-help-split .ed-media { order: -1; aspect-ratio: 16 / 10; }
 }
+
+/* Centered single-column prose (proof leads, the serendipity story) */
+.ed-prose.prose-center { margin-left: auto; margin-right: auto; text-align: center; }
