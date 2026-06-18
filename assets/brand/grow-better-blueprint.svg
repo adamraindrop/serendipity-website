@@ -7,7 +7,7 @@
 <text x="214" y="254" text-anchor="middle" font-family="Archivo,sans-serif" font-size="12.5" font-weight="600" fill="#0B2233">Begin with the end</text>
 <circle cx="342" cy="186" r="9" fill="#fff" stroke="#175477" stroke-width="2.4"/>
 <text x="342" y="216" text-anchor="middle" font-family="Archivo,sans-serif" font-size="12.5" font-weight="600" fill="#0B2233">Your 6 to 12 month plan</text>
-<rect x="42" y="208" width="88" height="24" rx="12" fill="#E9B44C"/><text x="86" y="225" text-anchor="middle" font-family="Archivo,sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.08em" fill="#0B2233">YOU ARE HERE</text><path d="M86 232 l-6 -8 12 0 z" fill="#E9B44C"/>
+<rect x="32" y="208" width="108" height="24" rx="12" fill="#E9B44C"/><text x="86" y="224.5" text-anchor="middle" font-family="Archivo,sans-serif" font-size="10" font-weight="700" letter-spacing="0.05em" fill="#0B2233">YOU ARE HERE</text><path d="M86 232 l-6 -8 12 0 z" fill="#E9B44C"/>
 <path d="M520.7 119.5 A104 104 0 0 1 647.3 119.5 L619.3 156.0 A58 58 0 0 0 548.7 156.0 Z" fill="#3AA6AE"/>
 <text x="584.0" y="124.5" text-anchor="middle" font-family="Archivo,sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.04em" fill="#fff">ATTRACT</text>
 <path d="M666.5 138.7 A104 104 0 0 1 666.5 265.3 L630.0 237.3 A58 58 0 0 0 630.0 166.7 Z" fill="#1B97A0"/>

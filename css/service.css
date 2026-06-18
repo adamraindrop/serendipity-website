@@ -92,3 +92,21 @@
   .ag-row { grid-template-columns: 96px 1fr 44px; gap: 10px; }
   .ag-label { font-size: 12px; }
 }
+
+/* ---------- Balanced layouts (fix left-heavy text sections) ---------- */
+/* Problem: empathy copy + a stakes pullquote card */
+.prob-split { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(36px, 5vw, 72px); align-items: center; }
+.prob-copy { display: flex; flex-direction: column; gap: var(--s-3); align-items: flex-start; }
+.prob-copy p { color: var(--c-ink-2); font-size: var(--fs-body-lg); line-height: 1.62; }
+.prob-stakes { background: var(--c-navy); border-radius: var(--r-card); padding: clamp(30px, 3.6vw, 46px); box-shadow: var(--shadow-card-hover); display: flex; flex-direction: column; gap: var(--s-2); }
+.stakes-tag { font-family: var(--ff-heading); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-marker); }
+.prob-stakes p { font-family: var(--ff-display); font-style: italic; font-size: clamp(20px, 2.3vw, 28px); line-height: 1.42; color: var(--c-on-dark); }
+/* How we help: copy+bullets beside a lifestyle photo (reuses .ed-split). Give copy a touch more room. */
+.svc-help-split.ed-split { grid-template-columns: 1.12fr 0.88fr; }
+.svc-help-split .ed-copy .svc-help-list { margin-top: var(--s-1); }
+.svc-help-split .ed-media { aspect-ratio: 4 / 5; }
+@media (max-width: 1000px) {
+  .prob-split { grid-template-columns: 1fr; }
+  .svc-help-split.ed-split { grid-template-columns: 1fr; }
+  .svc-help-split .ed-media { order: -1; aspect-ratio: 16 / 10; }
+}

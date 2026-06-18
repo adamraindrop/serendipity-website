@@ -392,8 +392,9 @@
 /* ---- production <img> fills (replaces prototype <image-slot fit=cover>) ---- */
 .hero-bg img,.problem-bg img,.faq-aside-bg img,.final-bg img,.video-card img,
 .ed-media img,.contact-media img,.cs-dash img,.svc-shot img,.faq-photo img,
-.luke-photo img{object-fit:cover;}
+.luke-photo img,.page-hero-bg img{object-fit:cover;}
 .hero-bg img{object-position:72% center;}
+.page-hero-bg img{object-position:50% 32%;}
 .cert-badge img{object-fit:contain;}
 
 /* ===== Grow Better Blueprint (homepage owned-framework section) ===== */
