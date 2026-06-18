@@ -1,16 +1,34 @@
-# Serendipity — marketing site
+# Serendipity — marketing site (handoff)
 
-Static HTML/CSS/JS recreation of the signed-off "Editorial + Evidence" redesign for
+Static HTML/CSS/JS build of the signed-off "Editorial + Evidence" site for
 **[createserendipity.com](https://createserendipity.com)** (HubSpot Platinum Solutions Partner).
-Built to run as-is on **GitHub Pages** today and to port cleanly to **HubSpot Content Hub** later.
+Runs as-is on **GitHub Pages** today; built to port cleanly to **HubSpot Content Hub**.
 
-Positioning: *make the move, make it stick, grow on it.* The client is the hero; Serendipity is
-the guide with a plan (the 30/90 Method). Warm, editorial, human — deliberately not dark-SaaS and
-not HubSpot orange.
+No framework, no build step, no dependencies. Plain HTML + CSS custom properties + vanilla JS.
+Every section is authored to map 1:1 to a future HubSpot module.
+
+Positioning: *make the move, make it stick, grow on it.* The customer is the hero; Serendipity is
+the guide with a plan. Warm, editorial, human — deliberately not dark-SaaS and not HubSpot orange.
+
+---
+
+## ⚠️ Read before you push live
+
+1. **`noindex` is on every page** (`<meta name="robots" content="noindex">`). This is a preview/staging
+   build. **Remove the noindex tag site-wide at launch.**
+2. **Unconfirmed client figures are flagged in the source.** Run `grep -rn "\[VERIFY\]" *.html` — the
+   **Solheim** (~$20M, 80%→100% capacity / waitlist) and **Expedient** (~$2M, tripled in 18 months)
+   numbers and industries are pending Luke's sign-off. They appear on `case-studies.html`, `revops.html`,
+   `demand-gen.html`, and `alignment.html`. We intentionally added **no review schema** for those two
+   until confirmed. Verify or remove before publishing.
+3. **`[CONFIRM-with-Luke]` faith line** in `about.html` is a draft — replace with Luke's own words.
+4. **Still placeholder (`href="#"`):** footer Privacy / Terms. The contact form is styled but **inert**
+   (wire to a HubSpot form at launch). Careers page carries a **[LEGAL] hiring-language review** note in
+   source.
+
+---
 
 ## Run it locally
-
-No build step. Any static server works:
 
 ```bash
 cd serendipity-website
@@ -18,110 +36,159 @@ python3 -m http.server 8190
 # open http://localhost:8190
 ```
 
-## Structure
+---
+
+## Pages (14)
 
 ```
-index.html            Home — hero, trust, proof strip, problem gauge, services (+ custom
-                      vizzes), manifesto, certs, "where HubSpot is going", 30/90 method
-                      (+ 40/40/20), stakes, pull-quote, 2 case results, assessment, FAQ, CTA
-case-studies.html     Two real studies: Perricone + Affordable Blinds (Problem/Build/Outcome)
-about.html            Meet Luke (cropped portrait) + founder story + video slot + SCALE +
-                      purpose line + verify + CTA
-contact.html          Hero + lead form (styled, inert for now)
-careers.html          [SCAFFOLD] "Be a blessing" — values/culture, open-roles stub (legal note)
-assessment.html       The Readiness Score quiz (full flow, real scoring)
+index.html                 Home — hero, trust bar, problem/gauge, services (5 "ways in" cards →
+                           deep pages), engineered-serendipity manifesto, Grow Better Blueprint
+                           section, certs, "where HubSpot is going", 30/90 Method, stakes,
+                           pull-quote, case result, assessment, FAQ, final CTA
+grow-better-blueprint.html The owned framework page (flagship). The signature graphic, the
+                           4 differentiators, the 3-step "how it works", the assessment on-ramp,
+                           Solheim + Expedient proof, the partnership beat, CTA
+services.html              Services index — 6 cards, each a step within the Blueprint
+implementation.html        HubSpot Implementation  ─┐
+migration.html             CRM Migration            │  6 service pages on one customer-as-hero
+portal-rescue.html         Portal Rescue            │  template, each built to the AEO spec
+revops.html                Ongoing RevOps           │  (see "Service pages" below)
+demand-gen.html            Inbound & Demand Gen      │  (the teal "growth" page)
+alignment.html             Sales & Marketing Alignment ┘ (the third-pillar page)
+case-studies.html          Four studies, one format: Perricone, Affordable Blinds, Solheim,
+                           Expedient (Problem / Build / Outcome + a metrics panel)
+about.html                 Meet Luke (cropped portrait) + founder's letter + faith line [draft]
+contact.html               Hero + lead form (styled, inert)
+careers.html               [SCAFFOLD] "Be a blessing" — values/culture (legal note in source)
+assessment.html            The Readiness Score quiz (full flow, real scoring)
+```
 
+```
 css/
-  tokens.css          Design tokens (:root) + friendly --navy/--gold aliases → HubSpot theme
-  base.css            Reset, type, buttons, eyebrow, .hl-gold/.hl-teal, reveal, header
-  sections.css        Homepage sections + textures + all built data-viz
-  pages.css           Inner-page components (case studies / about / contact / careers)
-  assessment.css      The quiz, re-skinned in the brand language
-  site.css            Production overrides, the V2 sections + signature CSS, the mobile pass
+  tokens.css      Design tokens (:root) + friendly --navy/--gold/--teal aliases → HubSpot theme
+  base.css        Reset, type, buttons, .eyebrow, .hl-gold/.hl-teal, scroll-reveal, header
+  sections.css    Homepage sections, textures, all built data-viz, the Blueprint homepage section
+  pages.css       Inner-page components (case studies / about / contact / Blueprint page)
+  service.css     The 6 service pages + services index (hero, what's-included, adoption gauge,
+                  comparison table, the balanced Problem/How-we-help splits)
+  assessment.css  The quiz, re-skinned in the brand language
+  site.css        Production overrides, signature CSS, the mobile pass
+                  (load order, every page: tokens → base → sections → pages → [service] → site)
 
 js/
-  main.js             Scroll-reveal, count-up, mobile nav (+ aria-expanded), poster video
-  assessment.js       Quiz logic (questions, scoring, 6-path recommendation engine, radar)
+  main.js         Scroll-reveal, count-up, mobile nav (+ aria-expanded)
+  assessment.js   Quiz logic (questions, scoring, 6-path recommendation engine)
 
 assets/
-  brand/              The signature system: serendipity-engine.svg + convergence-mark-{dark,light}.svg
-  logo/ badges/ press/ clients/ certs/ screenshots/ case/ portrait/ imagery/ favicon.png
+  brand/          grow-better-blueprint.svg (the signature graphic) + -mark.svg (compact) +
+                  convergence-mark-{dark,light}.svg + serendipity-engine.svg (the 26-touches motif)
+  imagery/        hero.png + lifestyle/01-10 (AI-photoreal, atmosphere only) + team-group
+  screenshots/    Real HubSpot UI: deal_pipeline, deal_report, portal, records, user-view
+  certs/ badges/ logo/ press/ clients/ case/ portrait/ favicon.png
 ```
 
-## The signature system ("feels custom", V2)
+---
 
-One ownable visual idea, the **"engineered convergence"** motif: many small touches resolving
-into one rising line and a single gold point (the 26 emails to one reply). Reused as the
-**Serendipity Engine** graphic in the homepage manifesto and as the **footer mark**, plus custom
-(non-stock) SVG iconography on the "where HubSpot is going" band and built mini-vizzes on the
-CRM Migration and Portal Rescue service cards (no lifestyle stock there).
+## The framework hierarchy (the spine of the site)
+
+Three nested layers, deliberately consistent across every page:
+
+1. **Brand thread — "Create Serendipity."** The *why/story*: we reverse-engineer the conditions for
+   growth so the right buyer meets the right message at the right moment (the 26-emails origin). Its
+   visual device is the **"engineered convergence"** motif. Used sparingly (homepage manifesto, About,
+   the Demand Gen page).
+2. **Owned framework — the Grow Better Blueprint.** The *journey/model* and the recurring anchor:
+   Build momentum → Begin with the end in mind → "you are here" → a 6–12 month plan → the
+   **Attract / Engage / Convert / Delight** flywheel across Marketing, Sales, Service Hubs with RevOps
+   at the center. Rendered as **one signature SVG** (`assets/brand/grow-better-blueprint.svg`), reused
+   on the homepage, its own page, and RevOps. The assessment is its on-ramp ("you are here").
+3. **Delivery method — the 30/90 Method.** *How the first build runs*: live in 30 days, adopted in 90.
+   Nests inside the Blueprint as the first momentum step; it is the "The path" section on the service
+   pages.
+
+---
+
+## Service pages (AEO spec)
+
+The five "ways in" homepage cards deep-link to their pages; Sales & Marketing Alignment is the
+third-pillar page linked from the homepage positioning beat. Every service page follows one
+customer-as-hero arc: **hero** (the buyer's outcome as H1 + a real HubSpot screenshot) → **the problem,
+in their words** (empathy copy + a "what it's costing you" stakes card) → **how we help** (the plan +
+a lifestyle photo) → **what's included** → **the path** (the 30/90 Method) → **proof** → **FAQ** →
+**CTA band**.
+
+Built to be cited by AI engines: an **answer-first** hero subhead, a **plain definition** near the top
+("X is …"), a **service-specific FAQ with FAQPage JSON-LD**, and a **comparison table**. Each page is
+its own indexable URL with a unique title, meta description, and schema.
+
+**Proof mapping (never forced):** Implementation → Expedient + Perricone · RevOps → Perricone + Solheim ·
+Demand Gen → Solheim + Expedient + the origin story · Alignment → Solheim + Expedient. **Migration** and
+**Portal Rescue** are intentionally credentials-led (method + certifications), with no client case study
+until Luke can name a real one.
+
+---
 
 ## Design system
 
 - **Colors:** navy `#0B2233`, gold `#E9B44C` (single primary accent), teal `#0E7C86`
-  (growth/win moments only), cream `#F8F6F1`, brand-blue `#175477`. All in `css/tokens.css`.
+  (growth/win moments only), cream `#F8F6F1`, cool-gray `#F4F7F9`, brand-blue `#175477`. In
+  `css/tokens.css`.
 - **Type:** Newsreader (display/numerals), Archivo (headings/UI), Source Sans 3 (body) — Google Fonts.
 - **Accent discipline:** gold is the only chroma for brand/proof/CTA; teal appears only on growth
-  moments. Section rhythm alternates cream / white / cool / navy; navy is reserved for anchors.
-- **All charts are built in CSS/SVG, never images:** adoption gauge, 30/90 timeline, lead-scoring
-  pyramid, certification stats, the assessment score dial / radar / category bars.
+  moments. Section rhythm alternates cream / white / cool-gray / navy.
+- **No em dashes in rendered copy** (a house rule throughout).
+- **All charts are built in CSS/SVG, never images:** the Blueprint graphic, adoption gauge, 30/90
+  timeline, lead-scoring pyramid, the assessment dial / radar / bars, the service comparison tables.
+- **Real screenshots / logos = proof; AI lifestyle photos = atmosphere only.**
+
+---
 
 ## The assessment (Readiness Score)
 
-`assessment.html` runs the full signed-off quiz end to end: intro → 3 business qualifiers →
-21 scored questions (7 areas × 3) → score + named stage → email gate → full scorecard.
+`assessment.html` runs the full signed-off quiz end to end: intro → business qualifiers → 21 scored
+questions (7 areas × 3) → score + named stage → email gate → full scorecard.
 
 - Scoring: category = sum/12 as %; Leadership & Adoption weighted 1.25×; overall = weighted avg.
   Stages: Flying Blind ≤45 · Foundations 46–65 · Ready to Build 66–85 · Ready to Scale 86+.
-  3+ red-flag answers cap the verdict at Foundations.
-- **Route, don't gate:** the result is a *recommendation* (6 deterministic paths keyed on current
-  CRM + data score + leadership/adoption), not a pass/fail.
-- **Preview build behavior:** nothing is sent or stored. Enter any valid work email (e.g.
-  `test@test.com`) at the gate to see your real, scored results. `assessment.html#sample` auto-loads
-  a sample manufacturing-on-Salesforce scorecard.
+- **Route, don't gate:** the result is a *recommendation* (6 deterministic paths), not a pass/fail.
+- **Preview behavior:** nothing is sent or stored. Enter any valid work email (e.g. `test@test.com`)
+  at the gate to see real scored results. `assessment.html#sample` auto-loads a sample scorecard.
 
-## Assets
-
-- **Real / load-bearing (kept, do not regenerate):** the two HubSpot screenshots that are genuine UI
-  (`deal_pipeline`, `deal_report`), the 5 certification badges, Luke's portrait (cropped to Luke on
-  About), the Perricone/Natalie's logo, press logos (Yahoo, Business Insider, MarketWatch, AP,
-  Cision, RD), client logos. Press + client logos were pulled from the live site's
-  `hubfs/brand-assets/serendipity/`.
-- **Migration & Rescue cards** use **built in-page vizzes** (a source→HubSpot convergence diagram and
-  a tangle→order diagram), not photos — the R5 "screenshots" at those URLs were actually tinted
-  lifestyle stock, so we built clean UI instead of shipping a fake or a stock photo.
-- **Atmosphere only:** the AI-photoreal lifestyle photos (hero, FAQ, final-CTA, SCALE backgrounds).
-
-## Scaffolded / hold for Luke (V2 brief §L)
-
-- **Contact form** is styled but inert — wire to a HubSpot form at launch.
-- **Founder video** slots (manifesto + About) are scaffolded "coming soon" buttons.
-- **Careers page** is a scaffold: faith-as-culture framing, no religious test. **[LEGAL] counsel must
-  review hiring language before launch** (note is in `careers.html` source). It's footer-linked, not
-  in the main nav, pending Luke's build-now-vs-roadmap call.
-- **`href="#"` placeholders** (pending real URLs): "Verify Platinum status", About verify cards
-  (HubSpot Directory / certs / LinkedIn), Perricone "Read the full story", footer Privacy / Terms.
-- **[SWAPPABLE]** the hero serendipity sub-line, the framework name ("The Serendipity Engine"), and
-  the exact "where HubSpot is going" treatment are scaffolded to the recommendation; easy to swap.
-- **[CONFIRM] copy:** final H1 wording; Perricone quote + Natalie's title; the ~3-month migration and
-  10-day audit timelines; guarantee remedy language (legal). No pricing anywhere (locked).
+---
 
 ## Mobile
 
-Desktop was the design source of truth; the mobile pass lives in `css/site.css` and refines the
-handoff's breakpoints. Notable mobile treatments: vertical hero scrim for contrast, stacked
-service cards with larger screenshots, and the 30/90 timeline reflowed to a vertical rail.
-Verified at 375 / 768 / 1280px.
+Desktop was the design source of truth; the mobile pass lives mostly in `css/site.css` and
+`css/service.css`. Verified at 390 / 768 / 1280px across every page. Notable treatments: the 2-column
+service heroes and Problem/How-we-help splits stack (media first), the 30/90 timeline reflows to a
+vertical rail, comparison tables scroll inside their own container.
 
-## Deploying to GitHub Pages
+---
 
-Push to a GitHub repo, then Settings → Pages → deploy from `main` / root. `.nojekyll` is included
-so every file is served verbatim. Keep `createserendipity.com` on its current host until you're
-ready to cut the domain over.
+## Deploying to GitHub Pages (current host)
 
-## Later: HubSpot Content Hub
+Push to a repo, then Settings → Pages → deploy from `main` / root. `.nojekyll` is included so every
+file is served verbatim. The live preview is at
+`https://adamraindrop.github.io/serendipity-website/`. Keep `createserendipity.com` on its current
+host until you cut the domain over (and remember to strip `noindex` first).
 
-Designed to port cleanly. `tokens.css` → theme fields (Colors/Typography). Header + footer → global
-partials. Each section → a custom module (heading/body/CTA/image fields, repeaters for cards/FAQ/
-phases). Contact form + assessment gate → HubSpot Forms; "Book a call" → a HubSpot Meetings link.
-FAQ → emit FAQPage JSON-LD. The assessment → a custom module with client-side scoring + Forms API.
+---
+
+## Porting to HubSpot Content Hub
+
+Designed for a clean port:
+
+- **`tokens.css` → theme fields** (Colors / Typography). The `:root` variables are the single source
+  of truth, so theme fields map almost 1:1.
+- **Header + footer → global partials.** Nav and footer are byte-identical across all 14 pages.
+- **Each section → a custom module** with heading / body / CTA / image fields, and repeaters for the
+  card rows, FAQ items, 30/90 phases, comparison-table rows, and case-study metrics.
+- **The Grow Better Blueprint graphic** is a self-contained inline SVG — drop it into a module as-is or
+  expose its labels as fields.
+- **Forms:** the contact form and the assessment email gate → HubSpot Forms; "Book a call" → a HubSpot
+  Meetings link.
+- **SEO/AEO:** keep each page's `<title>`, meta description, canonical, and the FAQPage / Service
+  JSON-LD. They are the AEO engine — one query family per page, no cannibalization.
+- **The assessment** → a custom module with the client-side scoring in `assessment.js` + Forms API for
+  the gate.
+```
